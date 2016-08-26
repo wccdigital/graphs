@@ -1,0 +1,563 @@
+<html>
+
+
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.csv.min.js"></script>
+<!-- <script type="text/javascript" src="plotly_latest_min.js">	</script> -->
+<script type="text/javascript" src="plotly-latest.min.js">	</script>
+<script type="text/javascript" src="CombinedGraphs.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+	generateGraphFromCsv("HouseDataQuarterly.csv", PropertyDataGraph);
+
+	generateGraphFromCsv("CitywideBCdataAnnual.csv", DevTrendsByYearGraph);
+
+	generateGraphFromCsv("CitywideBCdataMonthly.csv", DevelopmentbyMonthgraph);
+
+	generateGraphFromCsv("ResourceConsentsMonthly.csv", ResourceConsentsIssuedgraph);
+
+	generateGraphFromCsv("SuburbBCDataAnnualbyYear.csv", graphmaker_suburbgraph);
+
+	generateGraphFromCsv("DwellingTypeSplitAnnual.csv", piegraphmaker);
+
+	generateGraphFromCsv("SuburbBCDataAnnualbySuburbRanked.csv", CitywideBySuburbgraph);
+
+	generateGraphFromCsv("DwellingsCCCd.csv", DwellingsCCCd);
+
+	generateGraphFromCsv("Infometrics.csv", InfometricsGraph);
+
+	generateGraphFromCsv("BCsAndPopulationGraph.csv", BCsAndPopulationGraph);
+
+	generateGraphFromCsv("RentDetailedQuarterly.csv", SuburbRentalGraph);	
+	});
+	
+</script>
+</head>
+
+<body>
+
+
+<div id="SuburbInformation" style="width:1000px;height:500px;"></div>
+
+
+<div class="control-row">
+	Choose an area: 
+	<select class="datafromdropdown_suburbgraph" id="datafromdropdown_suburbgraph" onchange="generateGraphFromCsv('SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
+<option value="1">Wellington City Total</option>
+<option value="2">Aro Valley</option>
+<option value="3">Berhampore</option>
+<option value="4">Breaker Bay</option>
+<option value="5">Broadmeadows</option>
+<option value="6">Brooklyn</option>
+<option value="7">Churton Park</option>
+<option value="8">Crofton Downs</option>
+<option value="9">Glenside</option>
+<option value="10">Grenada North</option>
+<option value="11">Grenada Village</option>
+<option value="12">Hataitai</option>
+<option value="13">Highbury</option>
+<option value="14">Horokiwi</option>
+<option value="15">Houghton Bay</option>
+<option value="16">Island Bay</option>
+<option value="17">Johnsonville</option>
+<option value="18">Kaiwharawhara</option>
+<option value="19">Karaka Bays</option>
+<option value="20">Karori</option>
+<option value="21">Kelburn</option>
+<option value="22">Khandallah</option>
+<option value="23">Kilbirnie</option>
+<option value="24">Kingston</option>
+<option value="25">Lyall Bay</option>
+<option value="26">Makara</option>
+<option value="27">Makara Beach</option>
+<option value="28">Maupuia</option>
+<option value="29">Melrose</option>
+<option value="30">Miramar</option>
+<option value="31">Moa Point</option>
+<option value="32">Mornington</option>
+<option value="33">Mt Cook</option>
+<option value="34">Mt Victoria</option>
+<option value="35">Newlands</option>
+<option value="36">Newtown</option>
+<option value="37">Ngaio</option>
+<option value="38">Ngauranga</option>
+<option value="39">Northland</option>
+<option value="40">Ohariu</option>
+<option value="41">Oriental Bay</option>
+<option value="42">Owhiro Bay</option>
+<option value="43">Paparangi</option>
+<option value="44">Pipitea</option>
+<option value="45">Rongotai</option>
+<option value="46">Roseneath</option>
+<option value="47">Seatoun</option>
+<option value="48">Southgate</option>
+<option value="49">Strathmore Park</option>
+<option value="50">Takapu Valley</option>
+<option value="51">Tawa</option>
+<option value="52">Te Aro</option>
+<option value="53">Thorndon</option>
+<option value="54">Vogeltown</option>
+<option value="55">Wadestown</option>
+<option value="56">Wellington Central</option>
+<option value="57">Wilton</option>
+<option value="58">Woodridge</option>
+	</select>
+</div>
+
+<div class="control-row">
+	Compare with another area: 
+	<select class="comparisiondd_suburbgraph" id="comparisiondd_suburbgraph" onchange="generateGraphFromCsv('SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
+		<option> </option>
+<option value="1">Wellington City Total</option>
+<option value="2">Aro Valley</option>
+<option value="3">Berhampore</option>
+<option value="4">Breaker Bay</option>
+<option value="5">Broadmeadows</option>
+<option value="6">Brooklyn</option>
+<option value="7">Churton Park</option>
+<option value="8">Crofton Downs</option>
+<option value="9">Glenside</option>
+<option value="10">Grenada North</option>
+<option value="11">Grenada Village</option>
+<option value="12">Hataitai</option>
+<option value="13">Highbury</option>
+<option value="14">Horokiwi</option>
+<option value="15">Houghton Bay</option>
+<option value="16">Island Bay</option>
+<option value="17">Johnsonville</option>
+<option value="18">Kaiwharawhara</option>
+<option value="19">Karaka Bays</option>
+<option value="20">Karori</option>
+<option value="21">Kelburn</option>
+<option value="22">Khandallah</option>
+<option value="23">Kilbirnie</option>
+<option value="24">Kingston</option>
+<option value="25">Lyall Bay</option>
+<option value="26">Makara</option>
+<option value="27">Makara Beach</option>
+<option value="28">Maupuia</option>
+<option value="29">Melrose</option>
+<option value="30">Miramar</option>
+<option value="31">Moa Point</option>
+<option value="32">Mornington</option>
+<option value="33">Mt Cook</option>
+<option value="34">Mt Victoria</option>
+<option value="35">Newlands</option>
+<option value="36">Newtown</option>
+<option value="37">Ngaio</option>
+<option value="38">Ngauranga</option>
+<option value="39">Northland</option>
+<option value="40">Ohariu</option>
+<option value="41">Oriental Bay</option>
+<option value="42">Owhiro Bay</option>
+<option value="43">Paparangi</option>
+<option value="44">Pipitea</option>
+<option value="45">Rongotai</option>
+<option value="46">Roseneath</option>
+<option value="47">Seatoun</option>
+<option value="48">Southgate</option>
+<option value="49">Strathmore Park</option>
+<option value="50">Takapu Valley</option>
+<option value="51">Tawa</option>
+<option value="52">Te Aro</option>
+<option value="53">Thorndon</option>
+<option value="54">Vogeltown</option>
+<option value="55">Wadestown</option>
+<option value="56">Wellington Central</option>
+<option value="57">Wilton</option>
+<option value="58">Woodridge</option>
+	</select>
+</div>
+
+<div class="control-row">
+	Choose a data type: 
+	<select class="datatypedd_suburbgraph" id="datatypedd_suburbgraph" onchange="generateGraphFromCsv('SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
+//		<option> </option>
+<option value="1" selected="selected">Total Dwellings Consented</option>
+<option value="2">Consented Dwellings by Type</option>
+<option value="3">Value of Consented Construction</option>
+	</select>
+</div>
+
+<div>
+Datasource: <a href="SuburbBCDataAnnualbyYear.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
+
+</div>
+
+
+<div id="CitywideBySuburb" style="width:1000px;height:500px;"></div>
+
+
+<div class="SortType" id="SortType">
+    <button>Sort by Distance to CBD / Alphabetically</button>
+</div>
+
+
+<div class="dropdownStartYear_Citywide_by_Suburb">
+	Start year: 
+	<select class="dropdownStartYear_Citywide_by_Suburb" id="dropdownStartYear_Citywide_by_Suburb" onchange="generateGraphFromCsv('SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+
+	</select>
+</div>
+
+<div class="dropdownEndYear_Citywide_by_Suburb">
+	End year: 
+	<select class="dropdownEndYear_Citywide_by_Suburb" id="dropdownEndYear_Citywide_by_Suburb" onchange="generateGraphFromCsv('SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+	</select>
+</div>
+
+<div class="control-row">
+	Choose a data type: 
+	<select class="datatypedd_CitywideBySuburbgraph" id="datatypedd_CitywideBySuburbgraph" onchange="generateGraphFromCsv('SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
+<option value="1" selected="selected">Total Dwellings Consented</option>
+<option value="2">Consented Dwellings by Type</option>
+<option value="3">Value of Consented Construction</option>
+	</select>
+</div>
+
+<div>
+Datasource: <a href="SuburbBCDataAnnualbySuburbRanked.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
+</div>
+
+<div id="Dev_Trends_by_Year" style="width:1000px;height:500px;"></div>
+
+<div>
+Datasource: <a href="CitywideBCdataAnnual.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
+</div>
+
+
+<div id="DevelopmentbyMonth" style="width:1000px;height:500px;"></div>
+
+<div class="control-row">
+	Choose a data type: 
+	<select class="datatypedd_DevelopmentbyMonthgraph" id="datatypedd_DevelopmentbyMonthgraph" onchange="generateGraphFromCsv('CitywideBCdataMonthly.csv', DevelopmentbyMonthgraph)">
+<option value="1" selected="selected">Total Dwellings Consented</option>
+<option value="2">Consented Dwellings by Type</option>
+<option value="3">Value of Consented Construction</option>
+	</select>
+</div>
+
+<div>
+Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/Construction/building-consents-issued-info-releases.aspx" target="_blank">Statistics New Zealand</a>
+<a href="CitywideBCdataMonthly.csv" target="_blank">(.csv)</a>
+</div>
+
+
+<div id="DwellingTypePie" style="width:1000px;height:500px;"></div>
+<div class="dropdownStartYear">
+	Start year: 
+	<select class="dropdownStartYear" id="dropdownStartYear" onchange="generateGraphFromCsv('DwellingTypeSplitAnnual.csv', piegraphmaker)">
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+	</select>
+</div>
+<div class="dropdownEndYear">
+	End year: 
+	<select class="dropdownEndYear" id="dropdownEndYear" onchange="generateGraphFromCsv('DwellingTypeSplitAnnual.csv', piegraphmaker)">
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+	</select>
+</div>
+<div id="CompararisonButton"></div>
+<div id="CompareButton">
+<strong> Comparision Graph </strong>
+</div>
+<div class="dropdownStartYearTwo">
+	Start year: 
+	<select class="dropdownStartYearTwo" id="dropdownStartYearTwo" onchange="generateGraphFromCsv('DwellingTypeSplitAnnual.csv', piegraphmaker)">
+<option>-</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+	</select>
+</div>
+<div class="dropdownEndYearTwo">
+	End year: 
+	<select class="dropdownEndYearTwo" id="dropdownEndYearTwo" onchange="generateGraphFromCsv('DwellingTypeSplitAnnual.csv', piegraphmaker)">
+<option>-</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+	</select>
+</div>
+
+<div>
+Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/Construction/building-consents-issued-info-releases.aspx" target="_blank">Statistics New Zealand</a>
+<a href="DwellingTypeSplitAnnual.csv" target="_blank">(.csv)</a>
+</div>
+
+
+
+<div id="DwellingsCCCd" style="width:1000px;height:500px;"></div>
+
+<div class="control-row">
+	Choose an extra dataset: 
+	<select class="DwellingsCCCd_ExtraDataType" id="DwellingsCCCd_ExtraDataType" onchange="generateGraphFromCsv('DwellingsCCCd.csv', DwellingsCCCd)">
+<option value="1" selected="selected">-</option>
+<option value="1">Consented Dwellings</option>
+<option value="3">Projected Dwellings</option>
+	</select>
+</div>
+
+
+<div>
+Datasource: <a href="DwellingsCCCd.csv" target="_blank">Wellington City Council (.csv)</a>
+
+</div>
+
+
+<div id="BCsAndPopulationGraph" style="width:1000px;height:500px;"></div>
+
+<div>
+Datasources: <br />
+Building consents: Statistics New Zealand and Wellington City Council 
+<a href="BCsAndPopulationGraph.csv" target="_blank">(.csv)</a> <br /> 
+Population Estimates: <a href="http://www.stats.govt.nz/browse_for_stats/population/estimates_and_projections/subnational-pop-estimates-tables.aspx" target="_blank">Statistics New Zealand</a>
+<a href="BCsAndPopulationGraph.csv" target="_blank">(.csv)</a>
+<br />
+Notes: <br />
+In addition to population growth, extra demand for dwellings will also arise from changes of household formation (e.g. the trend for smaller households).  <br />
+Consented housing capacity is estimated by multiplying the number of consented dwellings by the average Wellington City household size of 2.6 (as at the 2013 Census).
+<br .>
+Due to the population data available, this graph uses years from July-June rather than calendar years. As a result, values are disparate to other graphs on this website.
+
+</div>
+
+ 
+<div id="PropertyDataGraph" style="width:1000px;height:500px;"></div>
+
+<div class="control-row">
+	Choose a data type: 
+	<select class="PropertySales_DataType" id="PropertySales_DataType" onchange="generateGraphFromCsv('HouseDataQuarterly.csv', PropertyDataGraph)">
+<option value="1" selected="selected">Median House Price</option>
+<option value="2">Number of House Sales</option>
+<option value="3">Both</option>
+	</select>
+</div>
+
+<div>
+Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor/HouseSales" target="_blank">Infometrics</a>
+<a href="HouseSalesQuarterly.csv" target="_blank">(.csv)</a>
+
+</div>
+
+
+<div id="InfometricsGraph" style="width:1000px;height:500px;"></div>
+
+<div class="control-row">
+	Choose a data type: 
+	<select class="InfometricsGraph_Datatype" id="InfometricsGraph_Datatype" onchange="generateGraphFromCsv('Infometrics.csv', InfometricsGraph)">
+<option value="1" selected="selected">Housing Affordability Index</option>
+<option value="2">House Price Growth</option>
+<option value="3">Rental Affordability Index</option>
+<option value="4">Growth of Average Rental Costs</option>
+	</select>
+
+<div>
+Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor" target="_blank">Infometrics</a>
+<a href="Infometrics.csv" target="_blank">(.csv)</a>
+</div>
+
+<div id="Extra references"></div>
+
+<div id="SuburbRentalGraph" style="width:1000px;height:500px;"></div>
+
+
+<div class="control-row">
+	Choose an area: 
+	<select class="AreaDD_SuburbRentalGraph" id="AreaDD_SuburbRentalGraph" onchange="generateGraphFromCsv('RentDetailedQuarterly.csv', SuburbRentalGraph)">
+<option value="1" selected="selected">TA Total</option>
+<option value="2">Brooklyn</option>
+<option value="3">Hataitai</option>
+<option value="4">Island Bay/Melrose</option>
+<option value="5">Johnsonville/Newlands</option>
+<option value="6">Karori</option>
+<option value="7">Karori South/Makara</option>
+<option value="8">Kelburn/Aro Valley</option>
+<option value="9">Khandallah</option>
+<option value="10">Kilbirnie/Lyall Bay</option>
+<option value="11">Kingston/Happy Valley</option>
+<option value="12">Lambton</option>
+<option value="13">Miramar/Strathmore</option>
+<option value="14">Mt Cook</option>
+<option value="15">Mt Victoria/Roseneath</option>
+<option value="16">Ngaio/Kaiwharawhara/Wilton</option>
+<option value="17">Northland</option>
+<option value="18">Oriental Bay/Seatoun</option>
+<option value="19">Tawa/Grenada North</option>
+<option value="20">Te Aro</option>
+<option value="21">Vogeltown/Berhampore/Newtown</option>
+<option value="22">Wadestown/Thordon</option>
+	</select>
+</div>
+
+<div class="control-row">
+	Choose a property type: 
+	<select class="TypeDD_SuburbRentalGraph" id="TypeDD_SuburbRentalGraph" onchange="generateGraphFromCsv('RentDetailedQuarterly.csv', SuburbRentalGraph)">
+<!-- <option value="1" selected="selected">Property Type Total</option> -->
+<option value="1" selected="selected">House</option>
+<option value="2">Apartment</option>
+<option value="3">Flat</option>
+<option value="4">Room</option>
+	</select>
+</div>
+
+<div class="control-row">
+	Choose a property size: 
+	<select class="BedroomsDD_SuburbRentalGraph" id="BedroomsDD_SuburbRentalGraph" onchange="generateGraphFromCsv('RentDetailedQuarterly.csv', SuburbRentalGraph)">
+<option value="1" selected="selected">Bedrooms Total</option>
+<option value="2">1</option>
+<option value="3">2</option>
+<option value="4">3</option>
+<option value="5">4</option>
+<option value="6">5+</option>
+	</select>
+</div>
+
+<div>
+Datasource: <a href="http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data" target="_blank">Ministry of Business, Innovation and Employment</a>
+<a href="RentDetailedQuarterly.csv" target="_blank">(.csv)</a>
+</div>
+
+
+<div id="ResourceConsentsIssued" style="width:1000px;height:500px;"></div>
+
+<div>
+Datasource: <a href="ResourceConsentsMonthly.csv" target="_blank">Wellington City Council (.csv)</a>
+</div>
+
+
+<div>
+<br />
+<br />
+<br />
+This work includes customised Statistics New Zealand&#39;s data which are licensed by Statistics New Zealand for re-use under the Creative Commons Attribution 3.0 New Zealand licence. <br />
+This work includes data from the Ministry of Business, Innovation and Employment, which are licensed for re-use under the Creative Commons Attribution 3.0 New Zealand licence. <br />
+This work includes data from Infometrics and Forecast.ID, prepared for Wellington City Council. 
+
+<br />
+<br />
+<br />
+</div>
+
+</body>
+
+</html>
