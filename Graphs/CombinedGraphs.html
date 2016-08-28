@@ -12,27 +12,27 @@
 
 $(document).ready(function(){
 
-	generateGraphFromCsv("/Data/HouseDataQuarterly.csv", PropertyDataGraph);
+	generateGraphFromCsv("/Graphs/data/HouseDataQuarterly.csv", PropertyDataGraph);
 
-	generateGraphFromCsv("/Data/CitywideBCdataAnnual.csv", DevTrendsByYearGraph);
+	generateGraphFromCsv("/Graphs/data/CitywideBCdataAnnual.csv", DevTrendsByYearGraph);
 
-	generateGraphFromCsv("/Data/CitywideBCdataMonthly.csv", DevelopmentbyMonthgraph);
+	generateGraphFromCsv("/Graphs/data/CitywideBCdataMonthly.csv", DevelopmentbyMonthgraph);
 
-	generateGraphFromCsv("/Data/ResourceConsentsMonthly.csv", ResourceConsentsIssuedgraph);
+	generateGraphFromCsv("/Graphs/data/ResourceConsentsMonthly.csv", ResourceConsentsIssuedgraph);
 
-	generateGraphFromCsv("/Data/SuburbBCDataAnnualbyYear.csv", graphmaker_suburbgraph);
+	generateGraphFromCsv("/Graphs/data/SuburbBCDataAnnualbyYear.csv", graphmaker_suburbgraph);
 
-	generateGraphFromCsv("/Data/DwellingTypeSplitAnnual.csv", piegraphmaker);
+	generateGraphFromCsv("/Graphs/data/DwellingTypeSplitAnnual.csv", piegraphmaker);
 
-	generateGraphFromCsv("/Data/SuburbBCDataAnnualbySuburbRanked.csv", CitywideBySuburbgraph);
+	generateGraphFromCsv("/Graphs/data/SuburbBCDataAnnualbySuburbRanked.csv", CitywideBySuburbgraph);
 
-	generateGraphFromCsv("/Data/DwellingsCCCd.csv", DwellingsCCCd);
+	generateGraphFromCsv("/Graphs/data/DwellingsCCCd.csv", DwellingsCCCd);
 
-	generateGraphFromCsv("/Data/Infometrics.csv", InfometricsGraph);
+	generateGraphFromCsv("/Graphs/data/Infometrics.csv", InfometricsGraph);
 
-	generateGraphFromCsv("/Data/BCsAndPopulationGraph.csv", BCsAndPopulationGraph);
+	generateGraphFromCsv("/Graphs/data/BCsAndPopulationGraph.csv", BCsAndPopulationGraph);
 
-	generateGraphFromCsv("/Data/RentDetailedQuarterly.csv", SuburbRentalGraph);	
+	generateGraphFromCsv("/Graphs/data/RentDetailedQuarterly.csv", SuburbRentalGraph);	
 	});
 	
 </script>
@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 <div class="control-row">
 	Choose an area: 
-	<select class="datafromdropdown_suburbgraph" id="datafromdropdown_suburbgraph" onchange="generateGraphFromCsv('/Data/SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
+	<select class="datafromdropdown_suburbgraph" id="datafromdropdown_suburbgraph" onchange="generateGraphFromCsv('/Graphs/data/SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
 <option value="1">Wellington City Total</option>
 <option value="2">Aro Valley</option>
 <option value="3">Berhampore</option>
@@ -112,7 +112,7 @@ $(document).ready(function(){
 
 <div class="control-row">
 	Compare with another area: 
-	<select class="comparisiondd_suburbgraph" id="comparisiondd_suburbgraph" onchange="generateGraphFromCsv('/Data/SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
+	<select class="comparisiondd_suburbgraph" id="comparisiondd_suburbgraph" onchange="generateGraphFromCsv('/Graphs/data/SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
 		<option> </option>
 <option value="1">Wellington City Total</option>
 <option value="2">Aro Valley</option>
@@ -177,7 +177,7 @@ $(document).ready(function(){
 
 <div class="control-row">
 	Choose a data type: 
-	<select class="datatypedd_suburbgraph" id="datatypedd_suburbgraph" onchange="generateGraphFromCsv('/Data/SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
+	<select class="datatypedd_suburbgraph" id="datatypedd_suburbgraph" onchange="generateGraphFromCsv('/Graphs/data/SuburbBCDataAnnualbyYear.csv', graphmaker_suburbgraph)">
 //		<option> </option>
 <option value="1" selected="selected">Total Dwellings Consented</option>
 <option value="2">Consented Dwellings by Type</option>
@@ -186,7 +186,7 @@ $(document).ready(function(){
 </div>
 
 <div>
-Datasource: <a href="/Data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
+Datasource: <a href="/Graphs/data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
 
 </div>
 
@@ -201,7 +201,7 @@ Datasource: <a href="/Data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statist
 
 <div class="dropdownStartYear_Citywide_by_Suburb">
 	Start year: 
-	<select class="dropdownStartYear_Citywide_by_Suburb" id="dropdownStartYear_Citywide_by_Suburb" onchange="generateGraphFromCsv('/Data/SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
+	<select class="dropdownStartYear_Citywide_by_Suburb" id="dropdownStartYear_Citywide_by_Suburb" onchange="generateGraphFromCsv('/Graphs/data/SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
 <option value="2015">2015</option>
 <option value="2014">2014</option>
 <option value="2013">2013</option>
@@ -220,7 +220,7 @@ Datasource: <a href="/Data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statist
 
 <div class="dropdownEndYear_Citywide_by_Suburb">
 	End year: 
-	<select class="dropdownEndYear_Citywide_by_Suburb" id="dropdownEndYear_Citywide_by_Suburb" onchange="generateGraphFromCsv('/Data/SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
+	<select class="dropdownEndYear_Citywide_by_Suburb" id="dropdownEndYear_Citywide_by_Suburb" onchange="generateGraphFromCsv('/Graphs/data/SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
 <option value="2015">2015</option>
 <option value="2014">2014</option>
 <option value="2013">2013</option>
@@ -238,7 +238,7 @@ Datasource: <a href="/Data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statist
 
 <div class="control-row">
 	Choose a data type: 
-	<select class="datatypedd_CitywideBySuburbgraph" id="datatypedd_CitywideBySuburbgraph" onchange="generateGraphFromCsv('/Data/SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
+	<select class="datatypedd_CitywideBySuburbgraph" id="datatypedd_CitywideBySuburbgraph" onchange="generateGraphFromCsv('/Graphs/data/SuburbBCDataAnnualbySuburbRanked.csv', CitywideBySuburbgraph)">
 <option value="1" selected="selected">Total Dwellings Consented</option>
 <option value="2">Consented Dwellings by Type</option>
 <option value="3">Value of Consented Construction</option>
@@ -246,13 +246,13 @@ Datasource: <a href="/Data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statist
 </div>
 
 <div>
-Datasource: <a href="/Data/SuburbBCDataAnnualbySuburbRanked.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
+Datasource: <a href="/Graphs/data/SuburbBCDataAnnualbySuburbRanked.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
 </div>
 
 <div id="Dev_Trends_by_Year" style="width:1000px;height:500px;"></div>
 
 <div>
-Datasource: <a href="/Data/CitywideBCdataAnnual.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
+Datasource: <a href="/Graphs/data/CitywideBCdataAnnual.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
 </div>
 
 
@@ -260,7 +260,7 @@ Datasource: <a href="/Data/CitywideBCdataAnnual.csv" target="_blank">Statistics 
 
 <div class="control-row">
 	Choose a data type: 
-	<select class="datatypedd_DevelopmentbyMonthgraph" id="datatypedd_DevelopmentbyMonthgraph" onchange="generateGraphFromCsv('/Data/CitywideBCdataMonthly.csv', DevelopmentbyMonthgraph)">
+	<select class="datatypedd_DevelopmentbyMonthgraph" id="datatypedd_DevelopmentbyMonthgraph" onchange="generateGraphFromCsv('/Graphs/data/CitywideBCdataMonthly.csv', DevelopmentbyMonthgraph)">
 <option value="1" selected="selected">Total Dwellings Consented</option>
 <option value="2">Consented Dwellings by Type</option>
 <option value="3">Value of Consented Construction</option>
@@ -269,14 +269,14 @@ Datasource: <a href="/Data/CitywideBCdataAnnual.csv" target="_blank">Statistics 
 
 <div>
 Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/Construction/building-consents-issued-info-releases.aspx" target="_blank">Statistics New Zealand</a>
-<a href="/Data/CitywideBCdataMonthly.csv" target="_blank">(.csv)</a>
+<a href="/Graphs/data/CitywideBCdataMonthly.csv" target="_blank">(.csv)</a>
 </div>
 
 
 <div id="DwellingTypePie" style="width:1000px;height:500px;"></div>
 <div class="dropdownStartYear">
 	Start year: 
-	<select class="dropdownStartYear" id="dropdownStartYear" onchange="generateGraphFromCsv('/Data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
+	<select class="dropdownStartYear" id="dropdownStartYear" onchange="generateGraphFromCsv('/Graphs/data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
 <option value="2015">2015</option>
 <option value="2014">2014</option>
 <option value="2013">2013</option>
@@ -306,7 +306,7 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 </div>
 <div class="dropdownEndYear">
 	End year: 
-	<select class="dropdownEndYear" id="dropdownEndYear" onchange="generateGraphFromCsv('/Data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
+	<select class="dropdownEndYear" id="dropdownEndYear" onchange="generateGraphFromCsv('/Graphs/data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
 <option value="2015">2015</option>
 <option value="2014">2014</option>
 <option value="2013">2013</option>
@@ -340,7 +340,7 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 </div>
 <div class="dropdownStartYearTwo">
 	Start year: 
-	<select class="dropdownStartYearTwo" id="dropdownStartYearTwo" onchange="generateGraphFromCsv('/Data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
+	<select class="dropdownStartYearTwo" id="dropdownStartYearTwo" onchange="generateGraphFromCsv('/Graphs/data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
 <option>-</option>
 <option value="2015">2015</option>
 <option value="2014">2014</option>
@@ -371,7 +371,7 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 </div>
 <div class="dropdownEndYearTwo">
 	End year: 
-	<select class="dropdownEndYearTwo" id="dropdownEndYearTwo" onchange="generateGraphFromCsv('/Data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
+	<select class="dropdownEndYearTwo" id="dropdownEndYearTwo" onchange="generateGraphFromCsv('/Graphs/data/DwellingTypeSplitAnnual.csv', piegraphmaker)">
 <option>-</option>
 <option value="2015">2015</option>
 <option value="2014">2014</option>
@@ -403,7 +403,7 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 
 <div>
 Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/Construction/building-consents-issued-info-releases.aspx" target="_blank">Statistics New Zealand</a>
-<a href="/Data/DwellingTypeSplitAnnual.csv" target="_blank">(.csv)</a>
+<a href="/Graphs/data/DwellingTypeSplitAnnual.csv" target="_blank">(.csv)</a>
 </div>
 
 
@@ -412,7 +412,7 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 
 <div class="control-row">
 	Choose an extra dataset: 
-	<select class="DwellingsCCCd_ExtraDataType" id="DwellingsCCCd_ExtraDataType" onchange="generateGraphFromCsv('/Data/DwellingsCCCd.csv', DwellingsCCCd)">
+	<select class="DwellingsCCCd_ExtraDataType" id="DwellingsCCCd_ExtraDataType" onchange="generateGraphFromCsv('/Graphs/data/DwellingsCCCd.csv', DwellingsCCCd)">
 <option value="1" selected="selected">-</option>
 <option value="1">Consented Dwellings</option>
 <option value="3">Projected Dwellings</option>
@@ -421,7 +421,7 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 
 
 <div>
-Datasource: <a href="/Data/DwellingsCCCd.csv" target="_blank">Wellington City Council (.csv)</a>
+Datasource: <a href="/Graphs/data/DwellingsCCCd.csv" target="_blank">Wellington City Council (.csv)</a>
 
 </div>
 
@@ -433,7 +433,7 @@ Datasources: <br />
 Building consents: Statistics New Zealand and Wellington City Council 
 <a href="BCsAndPopulationGraph.csv" target="_blank">(.csv)</a> <br /> 
 Population Estimates: <a href="http://www.stats.govt.nz/browse_for_stats/population/estimates_and_projections/subnational-pop-estimates-tables.aspx" target="_blank">Statistics New Zealand</a>
-<a href="/Data/BCsAndPopulationGraph.csv" target="_blank">(.csv)</a>
+<a href="/Graphs/data/BCsAndPopulationGraph.csv" target="_blank">(.csv)</a>
 <br />
 Notes: <br />
 In addition to population growth, extra demand for dwellings will also arise from changes of household formation (e.g. the trend for smaller households).  <br />
@@ -448,7 +448,7 @@ Due to the population data available, this graph uses years from July-June rathe
 
 <div class="control-row">
 	Choose a data type: 
-	<select class="PropertySales_DataType" id="PropertySales_DataType" onchange="generateGraphFromCsv('/Data/HouseDataQuarterly.csv', PropertyDataGraph)">
+	<select class="PropertySales_DataType" id="PropertySales_DataType" onchange="generateGraphFromCsv('/Graphs/data/HouseDataQuarterly.csv', PropertyDataGraph)">
 <option value="1" selected="selected">Median House Price</option>
 <option value="2">Number of House Sales</option>
 <option value="3">Both</option>
@@ -457,7 +457,7 @@ Due to the population data available, this graph uses years from July-June rathe
 
 <div>
 Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor/HouseSales" target="_blank">Infometrics</a>
-<a href="/Data/HouseSalesQuarterly.csv" target="_blank">(.csv)</a>
+<a href="/Graphs/data/HouseSalesQuarterly.csv" target="_blank">(.csv)</a>
 
 </div>
 
@@ -466,7 +466,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 
 <div class="control-row">
 	Choose a data type: 
-	<select class="InfometricsGraph_Datatype" id="InfometricsGraph_Datatype" onchange="generateGraphFromCsv('/Data/Infometrics.csv', InfometricsGraph)">
+	<select class="InfometricsGraph_Datatype" id="InfometricsGraph_Datatype" onchange="generateGraphFromCsv('/Graphs/data/Infometrics.csv', InfometricsGraph)">
 <option value="1" selected="selected">Housing Affordability Index</option>
 <option value="2">House Price Growth</option>
 <option value="3">Rental Affordability Index</option>
@@ -475,7 +475,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 
 <div>
 Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor" target="_blank">Infometrics</a>
-<a href="/Data/Infometrics.csv" target="_blank">(.csv)</a>
+<a href="/Graphs/data/Infometrics.csv" target="_blank">(.csv)</a>
 </div>
 
 <div id="Extra references"></div>
@@ -485,7 +485,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 
 <div class="control-row">
 	Choose an area: 
-	<select class="AreaDD_SuburbRentalGraph" id="AreaDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
+	<select class="AreaDD_SuburbRentalGraph" id="AreaDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Graphs/data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
 <option value="1" selected="selected">TA Total</option>
 <option value="2">Brooklyn</option>
 <option value="3">Hataitai</option>
@@ -513,7 +513,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 
 <div class="control-row">
 	Choose a property type: 
-	<select class="TypeDD_SuburbRentalGraph" id="TypeDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
+	<select class="TypeDD_SuburbRentalGraph" id="TypeDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Graphs/data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
 <!-- <option value="1" selected="selected">Property Type Total</option> -->
 <option value="1" selected="selected">House</option>
 <option value="2">Apartment</option>
@@ -524,7 +524,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 
 <div class="control-row">
 	Choose a property size: 
-	<select class="BedroomsDD_SuburbRentalGraph" id="BedroomsDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
+	<select class="BedroomsDD_SuburbRentalGraph" id="BedroomsDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Graphs/data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
 <option value="1" selected="selected">Bedrooms Total</option>
 <option value="2">1</option>
 <option value="3">2</option>
@@ -536,14 +536,14 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 
 <div>
 Datasource: <a href="http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data" target="_blank">Ministry of Business, Innovation and Employment</a>
-<a href="/Data/RentDetailedQuarterly.csv" target="_blank">(.csv)</a>
+<a href="/Graphs/data/RentDetailedQuarterly.csv" target="_blank">(.csv)</a>
 </div>
 
 
 <div id="ResourceConsentsIssued" style="width:1000px;height:500px;"></div>
 
 <div>
-Datasource: <a href="/Data/ResourceConsentsMonthly.csv" target="_blank">Wellington City Council (.csv)</a>
+Datasource: <a href="/Graphs/data/ResourceConsentsMonthly.csv" target="_blank">Wellington City Council (.csv)</a>
 </div>
 
 
