@@ -6,34 +6,7 @@
 <script type="text/javascript" src="plotly-latest.min.js">	</script>
 <script type="text/javascript" src="CombinedGraphs.js">		</script>
 
-<script type="text/javascript">
 
-$(document).ready(function(){
-
-	generateGraphFromCsv("/Data/HouseDataQuarterly.csv", PropertyDataGraph);
-
-	generateGraphFromCsv("/Data/CitywideBCdataAnnual.csv", DevTrendsByYearGraph);
-
-	generateGraphFromCsv("/Data/CitywideBCdataMonthly.csv", DevelopmentbyMonthgraph);
-
-	generateGraphFromCsv("/Data/ResourceConsentsMonthly.csv", ResourceConsentsIssuedgraph);
-
-	generateGraphFromCsv("/Data/SuburbBCDataAnnualbyYear.csv", graphmaker_suburbgraph);
-
-	generateGraphFromCsv("/Data/DwellingTypeSplitAnnual.csv", piegraphmaker);
-
-	generateGraphFromCsv("/Data/SuburbBCDataAnnualbySuburbRanked.csv", CitywideBySuburbgraph);
-
-	generateGraphFromCsv("/Data/DwellingsCCCd.csv", DwellingsCCCd);
-
-	generateGraphFromCsv("/Data/Infometrics.csv", InfometricsGraph);
-
-	generateGraphFromCsv("/Data/BCsAndPopulationGraph.csv", BCsAndPopulationGraph);
-
-	generateGraphFromCsv("/Data/RentDetailedQuarterly.csv", SuburbRentalGraph);	
-	});
-	
-</script>
 
 <script>
 
@@ -82,6 +55,36 @@ function generateGraphFromCsv(pathToCsvFile, graphFunction) {
 	parseCsv.done(graphFunction);
 	
 }
+	
+</script>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	generateGraphFromCsv("/Data/HouseDataQuarterly.csv", PropertyDataGraph);
+
+	generateGraphFromCsv("/Data/CitywideBCdataAnnual.csv", DevTrendsByYearGraph);
+
+	generateGraphFromCsv("/Data/CitywideBCdataMonthly.csv", DevelopmentbyMonthgraph);
+
+	generateGraphFromCsv("/Data/ResourceConsentsMonthly.csv", ResourceConsentsIssuedgraph);
+
+	generateGraphFromCsv("/Data/SuburbBCDataAnnualbyYear.csv", graphmaker_suburbgraph);
+
+	generateGraphFromCsv("/Data/DwellingTypeSplitAnnual.csv", piegraphmaker);
+
+	generateGraphFromCsv("/Data/SuburbBCDataAnnualbySuburbRanked.csv", CitywideBySuburbgraph);
+
+	generateGraphFromCsv("/Data/DwellingsCCCd.csv", DwellingsCCCd);
+
+	generateGraphFromCsv("/Data/Infometrics.csv", InfometricsGraph);
+
+	generateGraphFromCsv("/Data/BCsAndPopulationGraph.csv", BCsAndPopulationGraph);
+
+	generateGraphFromCsv("/Data/RentDetailedQuarterly.csv", SuburbRentalGraph);	
+	});
 	
 </script>
 
