@@ -20,6 +20,8 @@ var Zooming = false;
 var d3_formatPrefixes = ["e-24","e-21","e-18","e-15","e-12","e-9","e-6","e-3","","K","M","B","T","P","E","Z","Y"].map(d3_formatPrefix);
 
 // Override d3's formatPrefix function
+var d3 = Plotly.d3;
+
 d3.formatPrefix = function(value, precision) {
     var i = 0;
     if (value) {
