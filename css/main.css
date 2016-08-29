@@ -31,13 +31,13 @@ p {
 }
 
 header {
-    border-top: 1px solid #d5d5d5;
+    padding: 50px 3px 50px 3px;
     font-size: .8em;
     background-color: #FFCC00;
 }
 
 footer {
-    border-top: 1px solid #d5d5d5;
+    padding: 50px 3px 50px 3px;
     font-size: .8em;
     background-color: #FFCC00;
     
