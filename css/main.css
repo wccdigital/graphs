@@ -1,7 +1,12 @@
 body {
     margin: 60px auto;
     border-style: solid;
-    border-top-color: #ff0000
+    border-bottom-width: 15px;
+    border-top-color: #ffff00;
+    border-right-color: #ffffff;
+    border-left-color: #ffffff;
+    border-bottom-width: 15px;
+    border-bottom-color: #ffff00;
     width: 70%;
 }
 nav ul, footer ul {
