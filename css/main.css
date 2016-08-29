@@ -1,12 +1,15 @@
-body {
-    margin: 60px auto;
+html{
     border-style: solid;
-    border-bottom-width: 300px;
+    border-bottom-width: 30px;
     border-top-color: #FFCC00;
     border-right-color: #ffffff;
     border-left-color: #ffffff;
-    border-bottom-width: 300px;
+    border-bottom-width: 30px;
     border-bottom-color: #FFCC00;
+}
+
+body {
+    margin: 60px auto;
     width: 70%;
 }
 nav ul, footer ul {
