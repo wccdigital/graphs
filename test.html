@@ -31,19 +31,9 @@ $(document).ready(function(){
 <body>
 
 
-<div class="container">
-	
-	
-<div class="box">
-    <div class="top">
-      Property Data Graph
-    </div>
-    
-    <div class="bottom">
+<div id="PropertyDataGraph" class="clsA" style="width:1000px;height:500px;"></div>
 
-<div id="PropertyDataGraph" style="width:1000px;height:500px;"></div>
-
-<div class="control-row">
+<div class="clsA">
 	Choose a data type: 
 	<select class="PropertySales_DataType" id="PropertySales_DataType" onchange="generateGraphFromCsv('/Graphs/data/HouseDataQuarterly.csv', PropertyDataGraph)">
 <option value="1" selected="selected">Median House Price</option>
@@ -52,7 +42,7 @@ $(document).ready(function(){
 	</select>
 </div>
 
-<div>
+<div  class="clsA">
 Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor/HouseSales" target="_blank">Infometrics</a>
 <a href="/Graphs/data/HouseSalesQuarterly.csv" target="_blank">(.csv)</a>
 
@@ -61,16 +51,9 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 </div>
 </div>
 
-<div class="box">
-    <div class="top">
-      Infometrics Graph
-    </div>
-    
-    <div class="bottom">
+<div id="InfometricsGraph"  class="clsB" style="width:1000px;height:500px;"></div>
 
-<div id="InfometricsGraph" style="width:1000px;height:500px;"></div>
-
-<div class="control-row">
+<div  class="clsB">
 	Choose a data type: 
 	<select class="InfometricsGraph_Datatype" id="InfometricsGraph_Datatype" onchange="generateGraphFromCsv('/Graphs/data/Infometrics.csv', InfometricsGraph)">
 <option value="1" selected="selected">Housing Affordability Index</option>
@@ -80,27 +63,18 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 	</select>
 </div>
 
-<div>
+<div  class="clsB">
 Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor" target="_blank">Infometrics</a>
 <a href="/Graphs/data/Infometrics.csv" target="_blank">(.csv)</a>
 </div>
 
-<div id="Extra references"></div>
-
-</div>
-</div>
-
-<div class="box">
-    <div class="top">
-      Suburb Rental Graph
-    </div>
-    
-    <div class="bottom">
-
-<div id="SuburbRentalGraph" style="width:1000px;height:500px;"></div>
+<div id="Extra references" class="clsA"></div>
 
 
-<div class="control-row">
+<div id="SuburbRentalGraph"  class="clsC" style="width:1000px;height:500px;"></div>
+
+
+<div  class="clsC">
 	Choose an area: 
 	<select class="AreaDD_SuburbRentalGraph" id="AreaDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Graphs/data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
 <option value="1" selected="selected">TA Total</option>
@@ -128,7 +102,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 	</select>
 </div>
 
-<div class="control-row">
+<div class="clsC">
 	Choose a property type: 
 	<select class="TypeDD_SuburbRentalGraph" id="TypeDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Graphs/data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
 <!-- <option value="1" selected="selected">Property Type Total</option> -->
@@ -139,7 +113,7 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 	</select>
 </div>
 
-<div class="control-row">
+<div class="clsC">
 	Choose a property size: 
 	<select class="BedroomsDD_SuburbRentalGraph" id="BedroomsDD_SuburbRentalGraph" onchange="generateGraphFromCsv('/Graphs/data/RentDetailedQuarterly.csv', SuburbRentalGraph)">
 <option value="1" selected="selected">Bedrooms Total</option>
@@ -151,14 +125,10 @@ Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/Quart
 	</select>
 </div>
 
-<div>
+<div class="clsC">
 Datasource: <a href="http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data" target="_blank">Ministry of Business, Innovation and Employment</a>
 <a href="/Graphs/data/RentDetailedQuarterly.csv" target="_blank">(.csv)</a>
 </div>
 
-</div>
-
-</div>
-</div>
 
 </body>
