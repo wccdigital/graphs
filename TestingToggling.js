@@ -1,4 +1,10 @@
- $("#next").click(function(){
+ $(document).ready(function(){
+    $(".divs div").each(function(e) {
+        if (e != 0)
+            $(this).hide();
+    });
+	
+	$("#next").click(function(){
         if ($(".divs div:visible").next().length != 0)
             $(".divs div:visible").fadeOut(function(){
                 $(this).next().fadeIn();
