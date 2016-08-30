@@ -36,7 +36,16 @@ $(document).ready(function(){
 
 
 <div class="hideshow" id="button" style="margin-left:80px;">
-  <button onclick="ToggleA()" style="background-image:url(/images/CitywideDevTrendsByYear.PNG);background-size:cover;height:100px;width:200px">Development Trends by Year</button>
+  <button onclick="ToggleA()">
+  	<table>	
+  	<tr>
+  	<td height="80">	<img src="/images/CitywideDevTrendsByYear.PNG" />	</td>
+	</tr>
+	<tr>
+	<td height="20">	Development Trends by Year	</td>
+	</tr>
+	</table>
+  	</button>
   <button onclick="ToggleB()" style="background:#ffb3b3;">Development Trends by Suburb</button>
   <button onclick="ToggleC()" style="background:#ffb3b3;">Citywide Development Trends by Year</button>
   <button onclick="ToggleD()" style="background:#ffb3b3;">Recent Development Trends by Month</button>
