@@ -13,7 +13,7 @@ title: Development Trends
 <script type="text/javascript" src="jquery.csv.min.js">		</script>
 <script type="text/javascript" src="plotly-latest.min.js">	</script>
 <script type="text/javascript" src="CombinedGraphs.js">		</script>
-
+<script type="text/javascript" src="DivToggling.js">	 	</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -34,6 +34,19 @@ $(document).ready(function(){
 
 <body>
 
+
+<div class="hideshow" id="button" style="margin-left:80px;">
+  <button onclick="ToggleA()" style="background:#ffb3b3;">Median House Price</button>
+  <button onclick="ToggleB()" style="background:#ffb3b3;">Housing Affordability Index</button>
+  <button onclick="ToggleC()" style="background:#ffb3b3;">Rental Costs</button>
+  <button onclick="ToggleC()" style="background:#ffb3b3;">Rental Costs</button>
+  <button onclick="ToggleC()" style="background:#ffb3b3;">Rental Costs</button>
+  <button onclick="ToggleC()" style="background:#ffb3b3;">Rental Costs</button>
+  <button onclick="ToggleC()" style="background:#ffb3b3;">Rental Costs</button>
+</div>
+
+<div class="clsA">
+	
 <div id="SuburbInformation" style="width:1000px;height:500px;"></div>
 
 
@@ -180,7 +193,10 @@ $(document).ready(function(){
 Datasource: <a href="/Graphs/data/SuburbBCDataAnnualbyYear.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
 
 </div>
+</div>
 
+
+<div class="clsB" style="display:none;">
 
 <div id="CitywideBySuburb" style="width:1000px;height:500px;"></div>
 
@@ -240,11 +256,19 @@ Datasource: <a href="/Graphs/data/SuburbBCDataAnnualbyYear.csv" target="_blank">
 Datasource: <a href="/Graphs/data/SuburbBCDataAnnualbySuburbRanked.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
 </div>
 
+</div>
+
+<div class="clsC" style="display:none;">
+
 <div id="Dev_Trends_by_Year" style="width:1000px;height:500px;"></div>
 
 <div>
 Datasource: <a href="/Graphs/data/CitywideBCdataAnnual.csv" target="_blank">Statistics New Zealand and Wellington City Council (.csv)</a>
 </div>
+
+</div>
+
+<div class="clsD" style="display:none;">
 
 
 <div id="DevelopmentbyMonth" style="width:1000px;height:500px;"></div>
@@ -262,6 +286,9 @@ Datasource: <a href="/Graphs/data/CitywideBCdataAnnual.csv" target="_blank">Stat
 Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/Construction/building-consents-issued-info-releases.aspx" target="_blank">Statistics New Zealand</a>
 <a href="/Graphs/data/CitywideBCdataMonthly.csv" target="_blank">(.csv)</a>
 </div>
+
+</div>
+<div class="clsE" style="display:none;">
 
 
 <div id="DwellingTypePie" style="width:1000px;height:500px;"></div>
@@ -397,7 +424,8 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 <a href="/Graphs/data/DwellingTypeSplitAnnual.csv" target="_blank">(.csv)</a>
 </div>
 
-
+</div>
+<div class="clsF" style="display:none;">
 
 <div id="DwellingsCCCd" style="width:1000px;height:500px;"></div>
 
@@ -413,8 +441,10 @@ Datasource: <a href="http://www.stats.govt.nz/browse_for_stats/industry_sectors/
 
 <div>
 Datasource: <a href="/Graphs/data/DwellingsCCCd.csv" target="_blank">Wellington City Council (.csv)</a>
+</div>
 
 </div>
+<div class="clsG" style="display:none;">
 
 
 <div id="BCsAndPopulationGraph" style="width:1000px;height:500px;"></div>
@@ -434,6 +464,9 @@ Due to the population data available, this graph uses years from July-June rathe
 
 </div>
 
+</div>
+<div class="clsH" style="display:none;">
+
 
 <div id="ResourceConsentsIssued" style="width:1000px;height:500px;"></div>
 
@@ -441,6 +474,6 @@ Due to the population data available, this graph uses years from July-June rathe
 Datasource: <a href="/Graphs/data/ResourceConsentsMonthly.csv" target="_blank">Wellington City Council (.csv)</a>
 </div>
 
-
+</div>
 
 </body>
