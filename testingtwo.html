@@ -1,0 +1,41 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.csv.min.js">		</script>
+<script type="text/javascript" src="plotly-latest.min.js">	</script>
+<script type="text/javascript" src="CombinedGraphs.js">		</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	generateGraphFromCsv("/Graphs/data/Infometrics.csv", InfometricsGraph);
+	});
+	
+</script>
+
+
+</head>
+
+<body>
+
+
+<div id="InfometricsGraph"   class="clsB"  style="display:none;" style="width:1000px;height:500px;"></div>
+
+<div  class="clsB" style="display:none;">
+	Choose a data type: 
+	<select class="InfometricsGraph_Datatype" id="InfometricsGraph_Datatype" onchange="generateGraphFromCsv('/Graphs/data/Infometrics.csv', InfometricsGraph)">
+<option value="1" selected="selected">Housing Affordability Index</option>
+<option value="2">House Price Growth</option>
+<option value="3">Rental Affordability Index</option>
+<option value="4">Growth of Average Rental Costs</option>
+	</select>
+</div>
+
+<div  class="clsB" style="display:none;">
+Datasource: <a href="http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor" target="_blank">Infometrics</a>
+<a href="/Graphs/data/Infometrics.csv" target="_blank">(.csv)</a>
+</div>
+
+<div id="Extra references" class="clsB" style="display:none;"></div>
+
+
+</body>
