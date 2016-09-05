@@ -4,9 +4,9 @@ var graphdata = [{
 		container : "DevelopmentbyMonth",
 		width : "100%",
 		height : "500px",
-		csv : "/data/CitywideBCdataMonthly.csv",
+		csv : "/wccgraphs/data/CitywideBCdataMonthly.csv",
 		func : 'DevelopmentbyMonthgraph',
-		funcFile : "/graphFunctions/DevByMonth.js",
+		funcFile : "/wccgraphs/graphFunctions/DevByMonth.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -18,7 +18,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/data/CitywideBCdataMonthly.csv"
+				url : "/wccgraphs/data/CitywideBCdataMonthly.csv"
 			}
 		]
 	}, {
@@ -27,9 +27,9 @@ var graphdata = [{
 		container : "SuburbInformation",
 		width : "100%",
 		height : "500px",
-		csv : "/data/SuburbBCDataAnnualbyYear.csv",
+		csv : "/wccgraphs/data/SuburbBCDataAnnualbyYear.csv",
 		func : "graphmaker_suburbgraph",
-		funcFile : "/graphFunctions/SuburbGraph.js",
+		funcFile : "/wccgraphs/graphFunctions/SuburbGraph.js",
 		drop : [
 			{
 				text : "Choose an area",
@@ -61,7 +61,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/data/SuburbBCDataAnnualbyYear.csv"
+				url : "/wccgraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
 	}, {
@@ -70,9 +70,9 @@ var graphdata = [{
 		container : "CitywideBySuburb",
 		width : "100%",
 		height : "500px",
-		csv : "/data/SuburbBCDataAnnualbySuburbRanked.csv",
+		csv : "/wccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv",
 		func : "CitywideBySuburbgraph",
-		funcFile : "/graphFunctions/CitywideBySuburb.js",
+		funcFile : "/wccgraphs/graphFunctions/CitywideBySuburb.js",
 		button : [
 			{
 				text : "Sort by Distance to CBD / Alphabetically",
@@ -98,7 +98,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/data/SuburbBCDataAnnualbySuburbRanked.csv"
+				url : "/wccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv"
 			}
 		]
 	}, {
@@ -107,9 +107,9 @@ var graphdata = [{
 		container : "InfometricsGraph",
 		width : "100%",
 		height : "500px",
-		csv : "/data/Infometrics.csv",
+		csv : "/wccgraphs/data/Infometrics.csv",
 		func : "InfometricsGraph",
-		funcFile : "/graphFunctions/Isometrics.js",
+		funcFile : "/wccgraphs/graphFunctions/Isometrics.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -125,7 +125,7 @@ var graphdata = [{
 			},{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/data/Infometrics.csv"
+				url : "/wccgraphs/data/Infometrics.csv"
 			}
 		],
 		div : [

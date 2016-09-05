@@ -120,7 +120,7 @@ function getUrlVars()
     return vars;
 }
 
-$.getScript("/content/js/GraphData.js", function(data) {
+$.getScript("/wccgraphs/content/js/GraphData.js", function(data) {
 	dataReady();
 });
 
