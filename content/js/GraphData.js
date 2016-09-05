@@ -18,7 +18,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "http://wellington.govt.nz/~/media/GraphData/Data/CitywideBCdataMonthly.csv"
+				url : "/data/CitywideBCdataMonthly.csv"
 			}
 		]
 	}, {
@@ -61,7 +61,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "http://wellington.govt.nz/~/media/GraphData/Data/SuburbBCDataAnnualbyYear.csv"
+				url : "/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
 	}, {
@@ -98,7 +98,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "http://wellington.govt.nz/~/media/GraphData/Data/SuburbBCDataAnnualbySuburbRanked.csv"
+				url : "/data/SuburbBCDataAnnualbySuburbRanked.csv"
 			}
 		]
 	}, {
@@ -125,7 +125,7 @@ var graphdata = [{
 			},{
 				linktext : "Datasource",
 				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "http://wellington.govt.nz/~/media/GraphData/Data/Infometrics.csv"
+				url : "/data/Infometrics.csv"
 			}
 		],
 		div : [
