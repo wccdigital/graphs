@@ -120,7 +120,7 @@ function getUrlVars()
     return vars;
 }
 
-$.getScript("http://graphs/oldcontent/bits/GraphData.js", function(data) {
+$.getScript("http://graphs/content/js/GraphData.js", function(data) {
 	dataReady();
 });
 
