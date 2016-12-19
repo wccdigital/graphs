@@ -2,25 +2,24 @@
 	font-family: 'Helvetica Condensed Light';
 	src: src:url('/content/fonts/3fd2c21d-af8b-45be-a1e2-4e7182b7639e.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/3fd2c21d-af8b-45be-a1e2-4e7182b7639e.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		url('/content/fonts/4d888997-2061-451b-8569-6cee195e9915.woff') format('woff'), /* Modern Browsers */
 		url('/content/fonts/3cf3e566-7fc6-488f-8058-e5eb7ac5dc23.svg#3cf3e566-7fc6-488f-8058-e5eb7ac5dc23') format('svg'), /* Legacy iOS */
-		url('/content/fonts/bc71ac4a-9cc7-4120-a150-788ae80b91ec.ttf')  format('truetype'); /* Safari, Android, iOS */
+		url('/content/fonts/bc71ac4a-9cc7-4120-a150-788ae80b91ec.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('/content/fonts/4d888997-2061-451b-8569-6cee195e9915.woff') format('woff'); /* Modern Browsers */
 }
 
 @font-face {
 	font-family: 'Helvetica Condensed Light Italic';
 	src: src:url('/content/fonts/a8115334-7066-48aa-9f6f-5408058de50b.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/a8115334-7066-48aa-9f6f-5408058de50b.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/content/fonts/c4c23dc9-e825-45b3-b670-1f1099a1a291.woff') format('woff'), /* Modern Browsers */
 			url('/content/fonts/7e2dd8f3-2d0a-4365-af01-a45610544e4f.svg#7e2dd8f3-2d0a-4365-af01-a45610544e4f') format('svg'), /* Legacy iOS */
-			url('/content/fonts/1488bcfb-49c6-49fc-9310-7b78aadd7106.ttf')  format('truetype'); /* Safari, Android, iOS */
+			url('/content/fonts/1488bcfb-49c6-49fc-9310-7b78aadd7106.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/content/fonts/c4c23dc9-e825-45b3-b670-1f1099a1a291.woff') format('woff'); /* Modern Browsers */
 }
 
 @font-face {
 	font-family: 'Helvetica Condensed Regular';
 	src: src:url('/content/fonts/abf5b6e2-74e5-446b-b924-22c9749b33b6.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/abf5b6e2-74e5-446b-b924-22c9749b33b6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			
 			url('/content/fonts/f620604b-846b-4517-95c0-aa8a60dbb16c.svg#f620604b-846b-4517-95c0-aa8a60dbb16c') format('svg'), /* Legacy iOS */
 			url('/content/fonts/6fddd219-58f2-42d3-99d5-5abbfcfde1a1.ttf')  format('truetype'), /* Safari, Android, iOS */
 			url('/content/fonts/c6206d3d-1ef8-44ad-96fa-c25e22252eb0.woff') format('woff'); /* Modern Browsers */
@@ -30,27 +29,27 @@
 	font-family: 'Helvetica Condensed Regular Italic';
 	src: src:url('/content/fonts/1910a1ca-dd9c-4296-a75e-32fd3d467acd.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/1910a1ca-dd9c-4296-a75e-32fd3d467acd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/content/fonts/d37af467-6908-4edb-85b4-1b923e8677e0.woff') format('woff'), /* Modern Browsers */
 			url('/content/fonts/96b13e39-bd8a-4903-8af8-7567039cfd87.svg#96b13e39-bd8a-4903-8af8-7567039cfd87') format('svg'), /* Legacy iOS */
-			url('/content/fonts/046b9c60-95ae-4340-922f-d8b9be5c1a87.ttf')  format('truetype'); /* Safari, Android, iOS */
+			url('/content/fonts/046b9c60-95ae-4340-922f-d8b9be5c1a87.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/content/fonts/d37af467-6908-4edb-85b4-1b923e8677e0.woff') format('woff'); /* Modern Browsers */
 }
 
 @font-face {
 	font-family: 'Helvetica Condensed Medium';
 	src: src:url('/content/fonts/06b85ec8-4a05-49b4-91c2-f44ec792102b.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/06b85ec8-4a05-49b4-91c2-f44ec792102b.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/content/fonts/11398868-5e58-467f-86d1-650e10dd998a.woff') format('woff'), /* Modern Browsers */
 			url('/content/fonts/95e9b167-72f4-4e05-8337-e993a249b8b5.svg#95e9b167-72f4-4e05-8337-e993a249b8b5') format('svg'), /* Legacy iOS */
-			url('/content/fonts/285f76f1-9aeb-40f3-8df6-f87eb061df28.ttf')  format('truetype'); /* Safari, Android, iOS */
+			url('/content/fonts/285f76f1-9aeb-40f3-8df6-f87eb061df28.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/content/fonts/11398868-5e58-467f-86d1-650e10dd998a.woff') format('woff'); /* Modern Browsers */
 }
 
 @font-face {
 	font-family: 'Helvetica Condensed Medium Italic';
 	src: src:url('/content/fonts/0a088716-1313-4f3e-be05-7efe36ab60e6.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/0a088716-1313-4f3e-be05-7efe36ab60e6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/content/fonts/e4409e65-f0ce-4f06-b265-e1bebd1d699c.woff') format('woff'), /* Modern Browsers */
 			url('/content/fonts/6746a927-5c22-43ee-8829-f357fb06d31f.svg#6746a927-5c22-43ee-8829-f357fb06d31f') format('svg'), /* Legacy iOS */
-			url('/content/fonts/f1e304b2-dad9-4285-9d19-88644e47fbd9.ttf')  format('truetype'); /* Safari, Android, iOS */
+			url('/content/fonts/f1e304b2-dad9-4285-9d19-88644e47fbd9.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/content/fonts/e4409e65-f0ce-4f06-b265-e1bebd1d699c.woff') format('woff'); /* Modern Browsers */
 }
 html, body {
 	font-family:"Helvetica Neue",Arial,sans-serif !important;
