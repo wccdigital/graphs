@@ -20,9 +20,10 @@
 	font-family: 'Helvetica Condensed Regular';
 	src: src:url('/content/fonts/abf5b6e2-74e5-446b-b924-22c9749b33b6.eot'); /* IE9 Compat Modes */
 	src: url('/content/fonts/abf5b6e2-74e5-446b-b924-22c9749b33b6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('/content/fonts/c6206d3d-1ef8-44ad-96fa-c25e22252eb0.woff') format('woff'), /* Modern Browsers */
+			
 			url('/content/fonts/f620604b-846b-4517-95c0-aa8a60dbb16c.svg#f620604b-846b-4517-95c0-aa8a60dbb16c') format('svg'), /* Legacy iOS */
-			url('/content/fonts/6fddd219-58f2-42d3-99d5-5abbfcfde1a1.ttf')  format('truetype'); /* Safari, Android, iOS */
+			url('/content/fonts/6fddd219-58f2-42d3-99d5-5abbfcfde1a1.ttf')  format('truetype'), /* Safari, Android, iOS */
+			url('/content/fonts/c6206d3d-1ef8-44ad-96fa-c25e22252eb0.woff') format('woff'); /* Modern Browsers */
 }
 
 @font-face {
@@ -64,6 +65,17 @@ text {
 	font-family:"Helvetica Neue",Arial,sans-serif !important;
 	font-size:14px !important;
 }
+.logo,.logo:visited {
+	color:#333;
+	font-family:'Helvetica Condensed Light','Helvetica Neue',Arial,sans-serif;
+	line-height:1.5em;
+	margin:0;
+	padding:.5555em .8333em .6111em;
+	position:relative;
+	text-decoration:none;
+	z-index:1;
+}
+.logo:hover{ color:#333;text-decoration:none }
 .g-gtitle text {
 	font-size:1.2em !important;
 	font-weight:bold !important;
@@ -85,4 +97,5 @@ a:hover { text-decoration:underline; }
 	font-family: 'Helvetica Condensed Regular','Helvetica Neue',Arial,sans-serif;
 	padding:1em 0.5em;
 }
-#wccLogo {}
+#wccLogo a { color:inherit; }
+#wccLogo a:hover { text-decoration:none; }
