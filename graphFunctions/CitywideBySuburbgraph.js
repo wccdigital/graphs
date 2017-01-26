@@ -111,7 +111,7 @@ var SuburbsList = $.map(chartData, function(data){
 	var CategoryOrderType = CategoryOrderType || 'trace';
 			
 			
-if (datatypetouse_Citywide_by_Suburb == "" || datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
+if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 
 	data = [{
 		x: SuburbsList,
@@ -176,23 +176,14 @@ else {
 			tick0: 0, 
 			dtick: 1,  
 			tickangle: 45, 
+			categoryorder: 'category ascending',
 			fixedrange: Zooming},
 		yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming},
 		barmode: 'stack'
 		}
 	;}
 
+	
 Plotly.newPlot('CitywideBySuburb', data, layout);
 
-$('.SortType').click(function(){
-    $(this).toggleClass('toggle');
-	if (this.className == 'SortType toggle') {
-		var update = {'xaxis.categoryorder': 'trace'};
-		Plotly.relayout(CitywideBySuburb, update)
-		;}
-	else {
-		var update = {'xaxis.categoryorder': 'category ascending'};
-		Plotly.relayout(CitywideBySuburb, update)
-		;}
-	});
-	;}
+;}

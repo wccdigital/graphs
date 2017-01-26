@@ -46,17 +46,27 @@ var	RangeVar = [2003,2015];
 if (ExtraData == 'Consented Dwellings') {RangeVar = [1991,2015];}
 else if (ExtraData == 'Projected Dwellings') {RangeVar = [2003,2043];}
 
-	
+
+if (ExtraData == 'Projected Dwellings') {
 	layout = {
    	    title: 'Constructed Dwellings',
 	    showlegend: true,
 		legend: {orientation: 'h'},
-    	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 45, fixedrange: Zooming, range: RangeVar},
+    	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 5, tickangle: 22.5, fixedrange: Zooming, range: RangeVar},
      	yaxis: {zeroline: false, fixedrange: Zooming, rangemode: "tozero"}, 
 		}
+	;}
+else {
+	layout = {
+   	    title: 'Constructed Dwellings',
+	    showlegend: true,
+		legend: {orientation: 'h'},
+    	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 22.5, fixedrange: Zooming, range: RangeVar},
+     	yaxis: {zeroline: false, fixedrange: Zooming, rangemode: "tozero"}, 
+		}	
+	;}	
 		
-		
-	Plotly.newPlot('DwellingsCCCd', data, layout);
+	Plotly.newPlot('DwellingsCompleted', data, layout);
 	
 	} 
 	

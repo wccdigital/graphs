@@ -40,7 +40,7 @@ function ResourceConsentsIssuedgraph(chartData){
    	    title: 'Resource Consents Issued',
 	    showlegend: true,
 		legend: {x: 0.85, y: 0.95},
-    	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 45, fixedrange: Zooming},
+    	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 3, tickangle: 45, fixedrange: Zooming},
      	yaxis: {zeroline: false, fixedrange: Zooming},
      	barmode: 'stack',
 		};

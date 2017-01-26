@@ -48,8 +48,8 @@ if (DataToUse == "Wellington City"){
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0,
-			dtick: 12,
-			tickangle: 22.5},
+			dtick: 24,
+			tickangle: 17},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
@@ -125,8 +125,8 @@ else {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0,
-			dtick: 12,
-			tickangle: 22.5},
+			dtick: 24,
+			tickangle: 17},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
@@ -137,9 +137,8 @@ else {
 	}
 
 
-Plotly.newPlot('RentalGraph', data, layout);
+Plotly.newPlot('RentGraph', data, layout);
 }
 
 
 
-//Auckland	Christchurch	Dunedin	Hamilton	Nelson	New Plymouth District	Palmerston North	Tauranga District

@@ -85,15 +85,5 @@ var CategoryOrderType = CategoryOrderType || 'trace';
 Plotly.newPlot('CitywideBySuburbConsentedValue', data, layout);
 
 	
-$('.SortTypeConsentedValue').click(function(){
-    $(this).toggleClass('toggle');
-	if (this.className == 'SortTypeConsentedValue toggle') {
-		var update = {'xaxis.categoryorder': 'trace'};
-		Plotly.relayout(CitywideBySuburbConsentedValue, update)
-		;}
-	else {
-		var update = {'xaxis.categoryorder': 'category ascending'};
-		Plotly.relayout(CitywideBySuburbConsentedValue, update)
-		;}
-	});
+
 	;}

@@ -16,10 +16,10 @@ function InfometricsGraph(chartData) {
 		YearUsed = "YearOne"
 	};
 
-	document.getElementById("Extra references").innerHTML = "";
+	document.getElementById("ExtraReferences").innerHTML = "";
 
 	if (DataToUseWithSpaces == "Rental Affordability Index") {
-		var textdiv = document.getElementById("Extra references");
+		var textdiv = document.getElementById("ExtraReferences");
 		var aTag = document.createElement('a');
 		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Wellington%20City/StandardOfLiving/RentalAffordability");
 		aTag.setAttribute('target', "_blank");
@@ -28,7 +28,7 @@ function InfometricsGraph(chartData) {
 	}
 
 	if (DataToUseWithSpaces == "Housing Affordability Index") {
-		var textdiv = document.getElementById("Extra references");
+		var textdiv = document.getElementById("ExtraReferences");
 		var aTag = document.createElement('a');
 		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Wellington%20City/StandardOfLiving/Housing_Affordability");
 		aTag.setAttribute('target', "_blank");
@@ -77,7 +77,7 @@ function InfometricsGraph(chartData) {
 			tickmode : 'linear', 
 			tick0 : 0, 
 			dtick : 1,
-			tickangle : 45
+			tickangle : 22.5
 		},
 			yaxis : {
 			fixedrange : Zooming,
@@ -87,5 +87,5 @@ function InfometricsGraph(chartData) {
 
 		};
 	
-	Plotly.newPlot('InfometricsGraph', data, layout);
+	Plotly.newPlot('InfometricsInfo', data, layout);
 }

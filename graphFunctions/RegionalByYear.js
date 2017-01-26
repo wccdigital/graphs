@@ -56,8 +56,8 @@ layout = {
 		zeroline: false, 
 		tickmode: 'linear', 
 		tick0: 0, 
-		dtick: 1, 
-		tickangle: 45, 
+		dtick: 3, 
+		tickangle: 22.5, 
 		fixedrange: Zooming
 		},
    	yaxis: {
@@ -66,5 +66,5 @@ layout = {
 		rangemode: "tozero"},
 		},
 
-	Plotly.newPlot('RegionalByYearGraph', data, layout);
+	Plotly.newPlot('RegionalByYear', data, layout);
 }

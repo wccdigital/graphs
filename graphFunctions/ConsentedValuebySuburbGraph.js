@@ -48,7 +48,7 @@ else {
         title: 'Construction Value',
         showlegend: true,
 		legend: {orientation: "h"},
-        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1,  tickangle: 45, fixedrange: Zooming},
+        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1,  tickangle: 22.5, fixedrange: Zooming},
        	yaxis: {zeroline: false, tickformat: '$,s', hoverformat: '$,.4s', rangemode: "tozero", fixedrange: Zooming}
 		}
 	;

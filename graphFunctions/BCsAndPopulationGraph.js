@@ -64,5 +64,5 @@ function BCsAndPopulationGraph(chartData){
 
 
 
-Plotly.newPlot('BCsAndPopulationGraph', data, layout);
+Plotly.newPlot('BCsAndPopulation', data, layout);
 }

@@ -106,7 +106,7 @@ if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse == "
 			tickmode: 'linear', 
 			tick0: 0, 
 			dtick: 1, 
-			tickangle: 45, 
+			tickangle: 22.5, 
 			fixedrange: Zooming},
 		yaxis: {
 			zeroline: false, 
@@ -198,7 +198,6 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 	layout = {
 		title: 'Consented Dwellings by Type',
 		showlegend: true,
-		legend: {orientation: 'h'},
 		barmode: 'stack',
 
 		xaxis: {
@@ -207,7 +206,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			tickmode: 'linear', 
 			tick0: 0, 
 			dtick: 1, 
-			tickangle: 45, 
+			tickangle: 22.5, 
 			fixedrange: Zooming},
 		
 		xaxis2: {
@@ -216,7 +215,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			tickmode: 'linear', 
 			tick0: 0, 
 			dtick: 1, 
-			tickangle: 45, 
+			tickangle: 22.5, 
 			fixedrange: Zooming,
 			anchor: 'y2'},
 
@@ -257,7 +256,7 @@ else {
         title: 'Total Dwellings Consented',
         showlegend: true,
 		legend: {orientation: 'h'},
-        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 45, fixedrange: Zooming},
+        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 22.5, fixedrange: Zooming},
         yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming}
 		}
 	;}
