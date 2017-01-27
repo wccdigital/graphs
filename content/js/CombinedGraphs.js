@@ -58,6 +58,12 @@ function generateGraphFromCsv(pathToCsvFile, graphFunction) {
 	parseCsv.done(window[graphFunction]);
 
 }
+function generateGraphFromCsvData(csv, version, csvData, graphFunction) {
+
+	$.getScript("http://wellington.govt.nz/~/media/GraphData/SuburbBCDataAnnualbyYear.js", function(data) {
+		graphmaker_suburbgraph(csvdata);
+	});
+}
 
 function getGraph(id) {
 	generateGraphFromCsv(graphdata[id].csv, graphdata[id].func);
@@ -81,35 +87,6 @@ function createButtons(parent, buttonData) {
 	$.each(buttonData, function(index, bttn) {
 		$('#' + parent).append('<div class="buttonItem"><button id="' + bttn.id + '">' + bttn.text + '</button></div>');
 	});
-	
-	$('#SortType').click(function () {
-		$(this).toggleClass('toggle');
-		if ($(this).hasClass('toggle')) {
-			var update = {
-				'xaxis.categoryorder' : 'trace'
-			};
-			Plotly.relayout(CitywideBySuburb, update);
-		} 
-		else {
-			var update = {
-				'xaxis.categoryorder' : 'category ascending'
-			};
-			Plotly.relayout(CitywideBySuburb, update);
-		}
-	});	
-	
-	$('.SortTypeConsentedValue').click(function(){
-    $(this).toggleClass('toggle');
-	if (this.className == 'SortTypeConsentedValue toggle') {
-		var update = {'xaxis.categoryorder': 'trace'};
-		Plotly.relayout(CitywideBySuburbConsentedValue, update)
-		;}
-	else {
-		var update = {'xaxis.categoryorder': 'category ascending'};
-		Plotly.relayout(CitywideBySuburbConsentedValue, update)
-		;}
-	});
-	
 }
 
 function createLinks(parent, linkdata) {
@@ -126,6 +103,10 @@ function createDivs(parent, divdata) {
 	});
 }
 
+/*$.getScript("http://wellington.govt.nz/~/media/GraphData/GraphData.js", function(data) {
+	dataReady();
+});*/
+
 function getUrlVars()
 {
     var vars = [], hash;
@@ -139,7 +120,7 @@ function getUrlVars()
     return vars;
 }
 
-$.getScript("/content/js/GraphData.js", function(data) {
+$.getScript("/wccgraphs/content/js/GraphData.js", function(data) {
 	dataReady();
 });
 
