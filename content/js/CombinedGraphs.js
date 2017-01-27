@@ -88,7 +88,7 @@ function createButtons(parent, buttonData) {
 		$('#' + parent).append('<div class="buttonItem"><button id="' + bttn.id + '">' + bttn.text + '</button></div>');
 	});
 	
-	$('#SortType').click(function () {
+	$('#SortTypeCitywideBySuburb').click(function () {
 		$(this).toggleClass('toggle');
 		if ($(this).hasClass('toggle')) {
 			var update = {
