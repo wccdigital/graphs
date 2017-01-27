@@ -104,17 +104,21 @@ function createButtons(parent, buttonData) {
 		}
 	});	
 	
-	$('.SortTypeConsentedValue').click(function(){
-    $(this).toggleClass('toggle');
-	if (this.className == 'SortTypeConsentedValue toggle') {
-		var update = {'xaxis.categoryorder': 'trace'};
-		Plotly.relayout(CitywideBySuburbConsentedValue, update)
-		;}
-	else {
-		var update = {'xaxis.categoryorder': 'category ascending'};
-		Plotly.relayout(CitywideBySuburbConsentedValue, update)
-		;}
-	});
+	$('#SortTypeConsentedValue').click(function () {
+		$(this).toggleClass('toggle');
+		if ($(this).hasClass('toggle')) {
+			var update = {
+				'xaxis.categoryorder' : 'trace'
+			};
+			Plotly.relayout(CitywideBySuburbConsentedValue, update);
+		} 
+		else {
+			var update = {
+				'xaxis.categoryorder' : 'category ascending'
+			};
+			Plotly.relayout(CitywideBySuburbConsentedValue, update);
+		}
+	});	
 }
 
 function createLinks(parent, linkdata) {
