@@ -78,9 +78,21 @@ var CategoryOrderType = CategoryOrderType || 'trace';
 	layout = {
 		title: 'Total Construction Value by Suburb',
 		showlegend: false,
-		xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1,  tickangle: 45, fixedrange: Zooming},
-       	yaxis: {zeroline: false, tickformat: '$,s', hoverformat: '$,.4s', rangemode: "tozero", fixedrange: Zooming}
-		}
+		xaxis: {
+			zeroline: false,
+			tickmode: 'linear',
+			tick0: 0,
+			dtick: 1,
+			tickangle: 45,
+			categoryorder: 'category ascending',
+			fixedrange: Zooming},
+       		yaxis: {
+			zeroline: false,
+			tickformat: '$,s',
+			hoverformat: '$,.4s',
+			rangemode: "tozero",
+			fixedrange: Zooming}
+			}
 
 Plotly.newPlot('CitywideBySuburbConsentedValue', data, layout);
 
