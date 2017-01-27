@@ -87,6 +87,34 @@ function createButtons(parent, buttonData) {
 	$.each(buttonData, function(index, bttn) {
 		$('#' + parent).append('<div class="buttonItem"><button id="' + bttn.id + '">' + bttn.text + '</button></div>');
 	});
+	
+	$('#SortType').click(function () {
+		$(this).toggleClass('toggle');
+		if ($(this).hasClass('toggle')) {
+			var update = {
+				'xaxis.categoryorder' : 'trace'
+			};
+			Plotly.relayout(CitywideBySuburb, update);
+		} 
+		else {
+			var update = {
+				'xaxis.categoryorder' : 'category ascending'
+			};
+			Plotly.relayout(CitywideBySuburb, update);
+		}
+	});	
+	
+	$('.SortTypeConsentedValue').click(function(){
+    $(this).toggleClass('toggle');
+	if (this.className == 'SortTypeConsentedValue toggle') {
+		var update = {'xaxis.categoryorder': 'trace'};
+		Plotly.relayout(CitywideBySuburbConsentedValue, update)
+		;}
+	else {
+		var update = {'xaxis.categoryorder': 'category ascending'};
+		Plotly.relayout(CitywideBySuburbConsentedValue, update)
+		;}
+	});
 }
 
 function createLinks(parent, linkdata) {
