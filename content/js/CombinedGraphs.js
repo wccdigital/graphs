@@ -139,7 +139,7 @@ function getUrlVars()
     return vars;
 }
 
-$.getScript("./JavascriptGeneral/GraphData.js", function(data) {
+$.getScript("/content/js/GraphData.js", function(data) {
 	dataReady();
 });
 
