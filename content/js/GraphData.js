@@ -26,7 +26,7 @@ var graphdata = [{
 		button : [
 			{
 				text : "Sort by Distance to CBD / Alphabetically",
-				id : "SortType"
+				id : "SortTypeCitywideBySuburb"
 			}
 		],
 		drop : [
@@ -63,7 +63,7 @@ var graphdata = [{
  		button : [
 			{
 				text : "Sort by Distance to CBD / Alphabetically",
-				id : "SortType"
+				id : "SortTypeConsentedValue"
 			}
 		],
 		drop : [
