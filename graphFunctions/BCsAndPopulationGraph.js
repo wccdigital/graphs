@@ -51,7 +51,6 @@ function BCsAndPopulationGraph(chartData){
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
-			range: [1990.4,2016.5],
 			tickmode: 'linear', 
 			tick0 : 1,
 			dtick: 1,
