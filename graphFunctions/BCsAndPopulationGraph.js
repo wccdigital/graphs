@@ -46,7 +46,7 @@ function BCsAndPopulationGraph(chartData){
 		title: 'Consented Dwellings and Population Growth',
 		showlegend: true,
 //		legend: {orientation: 'h'},
-		legend: {x: 0.05, y: 0.95},
+		legend: {x: 0.0, y: 0.95},
 
 		xaxis: {
 			fixedrange: Zooming, 
