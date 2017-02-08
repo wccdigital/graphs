@@ -422,7 +422,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Ministry of Business, Innovation and Employment",
+				text : "Ministry of Business, Innovation and Employment (.csv)",
 				url : "/wccgraphs/data/RentDetailedQuarterly.csv"
 			}
 		]
