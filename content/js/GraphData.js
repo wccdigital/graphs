@@ -395,5 +395,36 @@ var graphdata = [{
 				url : "/wccgraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
+	}, {
+		name : "Suburb Rental Information",
+		id : "SubRentalInfo",
+		container : "SuburbRentalGraph",
+		width : "100%",
+		height : "500px",
+		csv : "/wccgraphs/data/RentDetailedQuarterly.csv",
+		func : "SuburbRentalGraph",
+		funcFile : "/wccgraphs/graphFunctions/SuburbRentalGraph.js",
+		drop : [
+			{
+				text : "Choose an area",
+				id : "AreaDD_SuburbRentalGraph",
+				valtext : ["TA Total","Brooklyn","Hataitai","Island Bay/Melrose","Johnsonville/Newlands","Karori","Karori South/Makara","Kelburn/Aro Valley","Khandallah","Kilbirnie/Lyall Bay","Kingston/Happy Valley","Lambton","Miramar/Strathmore","Mt Cook","Mt Victoria/Roseneath","Ngaio/Kaiwharawhara/Wilton","Northland","Oriental Bay/Seatoun","Tawa/Grenada North","Te Aro","Vogeltown/Berhampore/Newtown","Wadestown/Thordon"]
+			},{
+				text : "Choose a property type",
+				id : "TypeDD_SuburbRentalGraph",
+				valtext : ["House","Apartment","Flat","Room"]
+			},{
+				text : "Choose a property size",
+				id : "BedroomsDD_SuburbRentalGraph",
+				valtext : ["Bedrooms Total","1","2","3","4","5+"]
+			}
+		],
+		link : [
+			{
+				linktext : "Datasource",
+				text : "Ministry of Business, Innovation and Employment",
+				url : "/wccgraphs/data/RentDetailedQuarterly.csv"
+			}
+		]
 		}
 ];
