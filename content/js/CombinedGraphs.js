@@ -163,7 +163,11 @@ function dataReady() {
 			if (gdata.id == graph) {
 				$.getScript(gdata.funcFile, function(data) {
 					$('#graphPanel').append('<div id="'+gdata.id+'"><div id="'+gdata.container+'" style="width:'+gdata.width+'";height:'+gdata.height+';"></div></div>');
-
+					var title = decodeURIComponent(getUrlVars()['title']);
+					if (title == null || title == 'undefined' || title.length <= 0) {
+						title = gdata.name;
+					}
+					$('#wccPageTitle').text(title);
 					createButtons(gdata.id, gdata.button);
 					createDropDowns(gdata.id, index, gdata.drop);
 					createLinks(gdata.id, gdata.link);
