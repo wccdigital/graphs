@@ -48,16 +48,16 @@ function ConsentedValuebyMonthgraph(chartData){
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickmode: 'linear', 
-			tickangle: 22.5, 
+			tickangle: 17.5, 
 			tick0: 0,
-			dtick: 3,
+			dtick: 2,
 			range: [MonthsLength-24.6,MonthsLength]},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickformat: '$,s', 
 			hoverformat: '$,.4s', 
-			range:[0,120000000]}
+			range:[0,160000000]}
 		}
 	;
 
