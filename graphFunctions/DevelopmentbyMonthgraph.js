@@ -89,8 +89,8 @@ else {
 			zeroline: false, 
 			tickmode: 'linear',
 			tick0: 0,
-			dtick: 3,
-			tickangle: 0, 
+			dtick: 2,
+			tickangle: 22.5, 
 			fixedrange: Zooming, 
 			range: [MonthsLength-24.6,MonthsLength]
 			},
