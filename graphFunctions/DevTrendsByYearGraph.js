@@ -4,63 +4,63 @@ function DevTrendsByYearGraph(chartData){
 		return;
 	
         data = [{
-            x: $.map(chartData, function(data){
+		x: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"]
 			;}),
-			y: $.map(chartData, function(data){
+		y: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm New Houses"]
 			;}),
-            name: 'Houses',
-            line: {width: 6},
-			marker: {color: Colour1}
+        	name: 'Houses',
+       		line: {width: 6},
+		marker: {color: Colour1}
         }, {
-            x: $.map(chartData, function(data){
+            	x: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"]
 			;}),
-			y: $.map(chartData, function(data){
+		y: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm New Units"]
 			;}),
-            name: 'Units',
-            line: {width: 6,},
-			marker: {color: Colour2}
+		name: 'Units',
+		line: {width: 6,},
+		marker: {color: Colour2}
         }, {
-            x: $.map(chartData, function(data){
+            	x: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"]
 			;}),
-			y: $.map(chartData, function(data){
+		y: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm New Apartments"]
 			;}),
-            name: 'Apartments',
-            line: {width: 6,},
-			marker: {color: Colour5}
+		name: 'Apartments',
+		line: {width: 6,},
+		marker: {color: Colour5}
         }, {
-            x: $.map(chartData, function(data){
+           	x: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"]
 			;}),
-			y: $.map(chartData, function(data){
+		y: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Retirement Village Units"]
 			;}),
-            name: 'Retirement Village Units',
-            line: {width: 6,},
-			marker: {color: Colour4}
-		}, {
-            x: $.map(chartData, function(data){
+		name: 'Retirement Village Units',	
+		line: {width: 6,},
+		marker: {color: Colour4}
+	}, {
+		x: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"]
 			;}),
-			y: $.map(chartData, function(data){
+		y: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Total New Dwellings"]
 			;}),
-            name: 'Total',
-            opacity: 0.7,
-			marker:{color:'#AAAAAA'},
-			type: 'bar'    
+            	name: 'Total',
+            	opacity: 0.7,
+		marker:{color:'#AAAAAA'},
+		type: 'bar'    
         }],
 
         layout = {
-			title: 'Consented Dwellings by Year',
-			legend: {x: 0.8, y: 0.9},
-			xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 45, fixedrange: Zooming},
-			yaxis: {zeroline: false, fixedrange: Zooming}
+		title: 'Consented Dwellings by Year',
+		legend: {x: 0.8, y: 0.9},
+		xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 2, tickangle: 0, fixedrange: Zooming},
+		yaxis: {zeroline: false, fixedrange: Zooming}
         };
 
 
