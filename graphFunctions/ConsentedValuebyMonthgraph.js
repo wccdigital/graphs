@@ -42,7 +42,8 @@ function ConsentedValuebyMonthgraph(chartData){
 	layout = {
 		title: 'Construction Value by Month',
 		showlegend: true,
-		legend: {x: 0.65, y: 0.95},
+		legend: {orientation: 'h'},
+//		legend: {x: 0.65, y: 0.95},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
