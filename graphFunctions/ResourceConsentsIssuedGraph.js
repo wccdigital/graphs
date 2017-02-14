@@ -41,8 +41,16 @@ function ResourceConsentsIssuedgraph(chartData){
 	showlegend: true,
 	legend: {orientation: 'h'},
 //	legend: {x: 0.85, y: 0.95},
-    	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 3, tickangle: 22.5, fixedrange: Zooming},
-     	yaxis: {zeroline: false, fixedrange: Zooming},
+    	xaxis: {
+		zeroline: false,
+		tickmode: 'linear',
+		tick0: 0,
+		dtick: 3,
+		tickangle: 0,
+		fixedrange: Zooming},
+     	yaxis: {
+		zeroline: false,
+		fixedrange: Zooming},
      	barmode: 'stack',
 		};
 
