@@ -44,9 +44,9 @@ function ResourceConsentsIssuedgraph(chartData){
     	xaxis: {
 		zeroline: false,
 		tickmode: 'linear',
-		tick0: 0,
+		tick0: 3,
 		dtick: 3,
-		tickangle: 0,
+		tickangle: 22.5,
 		fixedrange: Zooming},
      	yaxis: {
 		zeroline: false,
