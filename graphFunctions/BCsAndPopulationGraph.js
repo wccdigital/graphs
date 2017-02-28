@@ -1,12 +1,14 @@
 
 function BCsAndPopulationGraph(chartData){
-	
+
+var DataType = $('#datatypedd_BCs_and_pop_growth_graph option:selected').text();
+
 	data = [{
 		x: $.map(chartData, function(data){
 			return data["Year"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["New Dwellings"];
+			return data[DataType];
 		}),
 		type: 'bar',
 		name: 'Consented Dwellings',
@@ -43,7 +45,7 @@ function BCsAndPopulationGraph(chartData){
 
 		
 	layout = {
-		title: 'Consented Dwellings and Population Growth',
+		title: DataType+' and Population Growth',
 		showlegend: true,
 //		legend: {orientation: 'h'},
 		legend: {x: 0.0, y: 0.95},
