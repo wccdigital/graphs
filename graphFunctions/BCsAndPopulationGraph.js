@@ -3,25 +3,21 @@ function BCsAndPopulationGraph(chartData){
 
 var DataType = $('#datatypedd_BCs_and_pop_growth_graph option:selected').text();
 
-
 Years = $.map(chartData, function(data){
 			return data["Year"];
 			});
 
-	
-alert(Years);
-	
 if (DataType == "Consented Dwellings"){
 	xRange = [1991, Math.max(Years)]
 		;}
 else {
 	xRange = [2004, Math.max(Years)]
 	;}
+
+alert(xRange);
 	
 	data = [{
-		x: $.map(chartData, function(data){
-			return data["Year"];
-		}),
+		x: Years,
 		y: $.map(chartData, function(data){
 			return data[DataType];
 		}),
@@ -30,10 +26,7 @@ else {
 		marker: {color: Colour1}
 		
         },{
-			
-		x: $.map(chartData, function(data){
-			return data["Year"];
-		}),
+		x: Years,
 		y: $.map(chartData, function(data){
 			return data[DataType+" Multiplied by Household Size"];
 		}),
@@ -44,9 +37,7 @@ else {
 		
         },{
 			
-		x: $.map(chartData, function(data){
-			return data["Year"];
-		}),
+		x: Years,
 		y: $.map(chartData, function(data){
 			return data["PopulationGrowth"];
 		}),
