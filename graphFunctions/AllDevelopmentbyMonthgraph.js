@@ -25,7 +25,7 @@ else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Rolling RCs Months"];
 		})		
-	xRange = [Xvalues.length-24.6,Math.max(Xvalues)]
+	xRange = [Math.max(Xvalues)-24.6,Math.max(Xvalues)]
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
@@ -46,7 +46,7 @@ else {
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Rolling Longterm Months"];
 		})		
-	xRange = [Xvalues.length-24.6,Math.max(Xvalues)]
+	xRange = [Math.max(Xvalues)-24.6,Math.max(Xvalues)]
 	;}
 
 	
