@@ -192,7 +192,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			zeroline: false, 
 			fixedrange: Zooming
 			tickformat: '$,s', 
-			hoverformat: '$,.4s'}
+			hoverformat: '$,.4s'
 			}
 		}
 	;}
