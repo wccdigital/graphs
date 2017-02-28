@@ -10,9 +10,7 @@ var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph optio
 
 if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		})	
+	Xvalues = Xvalues	
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
@@ -22,9 +20,7 @@ else if (timeframe_Development_by_Month == "Annually") {
 	;}	
 else {
 	TimeframeConverted = "Citywide Rolling Longterm ",
-	Xaxis = $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		})	
+	Xaxis = Xvalues	
 	;}
 
 
@@ -34,9 +30,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length
 
 	data = [{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
@@ -47,17 +41,24 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 	layout = {
 		title: 'Total Dwellings Consented by Month',
 		showlegend: false,
-		xaxis: {zeroline: false, tickmode: 'auto', tickangle: 45, fixedrange: Zooming, range: [MonthsLength-24.6,MonthsLength]},		
-		yaxis: {zeroline: false, fixedrange: Zooming, range: [0,160]},
+		xaxis: {
+			zeroline: false,
+			tickmode: 'auto',
+			tickangle: 45,
+			fixedrange: Zooming,
+			range: [MonthsLength-24.6,MonthsLength]
+			},		
+		yaxis: {
+			zeroline: false,
+			fixedrange: Zooming
+			},
 		}
 	;}
 
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
 	data = [{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Houses"];
 		}),
@@ -66,9 +67,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour1}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Units"];
 		}),
@@ -77,9 +76,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour2}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Apartments"];
 		}),
@@ -88,9 +85,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour3}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Retirement Village Units"];
 		}),
@@ -117,8 +112,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			},
 		yaxis: {
 			zeroline: false, 
-			fixedrange: Zooming, 
-			range: [0,160]},
+			fixedrange: Zooming,
 			barmode: 'stack'
 			}
 	;}
@@ -126,9 +120,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
 	data = [{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Residential Buildings"];
 		}),
@@ -137,9 +129,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		marker: {color: Colour1}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"NonResidential Construction"];
 		}),
@@ -148,9 +138,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		marker: {color: Colour2}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total Construction Value"];
 		}),
@@ -178,18 +166,15 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			},
 		yaxis: {
 			zeroline: false, 
-			fixedrange: Zooming, 
-			range: [0,160]},
-			barmode: 'stack'
+			fixedrange: Zooming
 			}
+		}
 	;}
 
 else {
 
 	data = [{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Land Use Consents"];
 		}),
@@ -198,9 +183,7 @@ else {
 		marker: {color: Colour1}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Subdivision Consents"];
 		}),
@@ -209,14 +192,12 @@ else {
 		marker: {color: Colour2}
 		
         },{
-		x: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		}),
+		x: Xvalues,
 		y: $.map(chartData, function(data){
-			return data[TimeframeConverted+"Resource Consents"];
+			return data[TimeframeConverted+"Combined Consents"];
 		}),
-		name: "Total Resource Consents",
-		type: 'line',
+		name: "Combined Land Use and Subdivision Consents",
+		type: 'bar',
 		marker: {color: Colour3}
 		
         }];
@@ -240,10 +221,9 @@ else {
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming, 
-			range: [0,160]},
 			barmode: 'stack'
-			}	
-	;}
+			}
+		;}
 
 	
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
