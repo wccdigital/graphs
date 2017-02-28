@@ -36,7 +36,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timefr
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
-	Xvalues = ['2015', '2016'],
+	Xvalues = [2015, 2016],
 	VisType = 'line'	
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Monthly") {
