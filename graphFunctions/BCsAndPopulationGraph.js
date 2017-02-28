@@ -20,7 +20,7 @@ var DataType = $('#datatypedd_BCs_and_pop_growth_graph option:selected').text();
 			return data["Year"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["New Dwellings Multiplied by Household Size"];
+			return data[DataType+" Multiplied by Household Size"];
 		}),
 		type: 'bar',
 		connectgaps: true,
