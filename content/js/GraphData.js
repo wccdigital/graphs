@@ -175,7 +175,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "datatypedd_DevelopmentbyMonthgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction"]
+				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction", "Resource Consents"]
 			},{
 				text : "Choose a timeframe",
 				id : "timeframe_DevelopmentbyMonthgraph",
