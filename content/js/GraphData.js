@@ -153,7 +153,7 @@ var graphdata = [{
 			},{
 				text : "Choose a timeframe",
 				id : "timeframe_DevelopmentbyMonthgraph",
-				valtext : ["Months","Years", "Rolling average"]	
+				valtext : ["Months","Years", "Rolling Average"]	
 			}
 		],
 		link : [
