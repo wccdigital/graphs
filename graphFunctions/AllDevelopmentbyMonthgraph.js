@@ -25,7 +25,7 @@ else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Rolling RCs Months"];
 		})		
-	xRange = [Xvalues.length-24.6,Xvalues.length]
+	xRange = [Xvalues.length-24.6,Math.max(Xvalues)]
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
@@ -46,7 +46,7 @@ else {
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Rolling Longterm Months"];
 		})		
-	xRange = [Xvalues.length-24.6,Xvalues.length]
+	xRange = [Xvalues.length-24.6,Math.max(Xvalues)]
 	;}
 
 	
@@ -76,7 +76,8 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			},		
 		yaxis: {
 			zeroline: false,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [0,200]
 			},
 		}
 	;}
@@ -137,7 +138,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming,
-			barmode: 'stack'
+			barmode: 'stack',
+			range: [0,200]
 			}
 		}
 	;}
