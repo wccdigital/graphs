@@ -263,6 +263,9 @@ yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		});
 
+alert("yValues: "+yValues)
+alert("rangeStart"+xValues[xValues.length - yValues.length])
+	
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
