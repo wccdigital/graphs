@@ -6,7 +6,7 @@ var DataType = $('#datatypedd_BCs_and_pop_growth_graph option:selected').text();
 
 Years = $.map(chartData, function(data){
 			return data["Year"];
-			}),
+			});
 
 if (DataType == "Consented Dwellings"){
 	xRange = [1991, Math.max(Years)]
