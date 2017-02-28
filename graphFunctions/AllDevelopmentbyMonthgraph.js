@@ -1,5 +1,3 @@
-
-	
 function AllDevelopmentbyMonthgraph(chartData){
 	
 if (chartData == null || chartData.length <= 0)
@@ -115,7 +113,9 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			fixedrange: Zooming,
 			barmode: 'stack'
 			}
+		}
 	;}
+
 	
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
@@ -223,7 +223,8 @@ else {
 			fixedrange: Zooming, 
 			barmode: 'stack'
 			}
-		;}
+		}
+	;}
 
 	
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
