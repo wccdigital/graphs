@@ -23,7 +23,7 @@ if(TypeToUse == "Property Type Total" && BedroomsToUse == "Bedrooms Total" && Ar
         }];
 		
 	layout = {
-		title: 'Rental Costs',
+		title: 'Detailed Rental Costs',
 		showlegend: false,
 		xaxis: {
 			fixedrange: Zooming, 
