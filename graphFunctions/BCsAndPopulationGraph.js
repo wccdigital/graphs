@@ -3,19 +3,16 @@ function BCsAndPopulationGraph(chartData){
 
 var DataType = $('#datatypedd_BCs_and_pop_growth_graph option:selected').text();
 
-if (DataType == 'Consented Dwellings'){
-	xRange = [1991,
-		  Math.max(x: $.map(chartData, function(data){
+
+Years = $.map(chartData, function(data){
 			return data["Year"];
-			}))
+			}),
+
+if (DataType == "Consented Dwellings"){
+	xRange = [1991, Math.max(Years)]
 		;}
 else {
-	xRange = [2004,
-		  Math.max(x: $.map(chartData, function(data){
-			return data["Year"];
-			}))
-		}
-	
+	xRange = [2004, Math.max(Years)]
 	;}
 	
 	data = [{
