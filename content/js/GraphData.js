@@ -163,6 +163,33 @@ var graphdata = [{
 			}
 		]
 	}, {
+		name : "Development By Month",
+		id : "DevMonthYearRollingInfo",
+		container : "AllDevelopmentbyMonth",
+		width : "100%",
+		height : "500px",
+		csv : "/wccgraphs/data/CitywideBCdataMonthly.csv",
+		func : 'AllDevelopmentbyMonthgraph',
+		funcFile : "/wccgraphs/graphFunctions/AllDevelopmentbyMonthgraph.js",
+		drop : [
+			{
+				text : "Choose a data type",
+				id : "datatypedd_DevelopmentbyMonthgraph",
+				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction"]
+			},{
+				text : "Choose a timeframe",
+				id : "timeframe_DevelopmentbyMonthgraph",
+				valtext : ["Monthly","Annually", "Rolling 12 month average"]	
+			}
+		],
+		link : [
+			{
+				linktext : "Datasource",
+				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				url : "/wccgraphs/data/CitywideBCdataMonthly.csv"
+			}
+		]
+	}, {
 		name : "Development By Year",
 		id : "DevTrendsByYear",
 		container : "Dev_Trends_by_Year",
