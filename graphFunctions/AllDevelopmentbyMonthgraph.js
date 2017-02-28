@@ -34,6 +34,25 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timefr
 		}),
 	VisType = 'line'	
 	;}
+else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Annually") {
+	TimeframeConverted = "Citywide Annual Longterm ",
+	Xvalues = ['2015', '2016'],
+	VisType = 'line'	
+	;}
+else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Monthly") {
+	TimeframeConverted = "Citywide Months Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Subdivision Months"];
+		}),
+	VisType = 'bar'	
+	;}
+else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling") {
+	TimeframeConverted = "Citywide Rolling Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Subdivision Rolling Months"];
+		}),
+	VisType = 'bar'	
+	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
@@ -250,6 +269,38 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		}
 	;}
 	
+else if (datatypetouse_Development_by_Month == "New Parcels") {
+
+	data = [{
+		x: Xvalues,
+		y: $.map(chartData, function(data){
+			return data[TimeframeConverted+"New Parcels"];
+		}),
+		name: "New Parcels",
+		type: VisType,
+		line: {width: 6,},
+		marker: {color: Colour1}
+        }];
+
+	layout = {
+		title: 'New Parcels',
+		showlegend: false,
+//		legend: {x: 0.8, y: 0.9},
+		legend : {orientation: 'h'},
+		xaxis: {
+			zeroline: false, 
+			tickmode: 'linear',
+			tick0: 0,
+			dtick: 2,
+			tickangle: 22.5, 
+			fixedrange: Zooming
+			},
+		yaxis: {
+			zeroline: false, 
+			fixedrange: Zooming
+			}
+		}
+	;}	
 		
 else {
 
