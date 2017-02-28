@@ -162,7 +162,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			return data[TimeframeConverted+"Residential Buildings"];
 		}),
 		name: "Residential Buildings",
-		type: 'bar',
+		type: VisType,
+		line: {width: 6,},
 		marker: {color: Colour1}
 		
         },{
@@ -171,7 +172,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			return data[TimeframeConverted+"NonResidential Construction"];
 		}),
 		name: "NonResidential Construction",
-		type: 'bar',
+		type: VisType,
+		line: {width: 6,},
 		marker: {color: Colour2}
 		
         },{
