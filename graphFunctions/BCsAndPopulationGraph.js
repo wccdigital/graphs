@@ -20,7 +20,7 @@ data = [{
 			return data[DataType];
 		}),
 		type: 'bar',
-		name: 'Consented Dwellings',
+		name: DataType,
 		marker: {color: Colour1}
 		
         },{
