@@ -8,7 +8,7 @@ if (DataType == 'Consented Dwellings'){
 		  Math.max(x: $.map(chartData, function(data){
 			return data["Year"];
 			}))
-		}
+		;}
 else {
 	xRange = [2004,
 		  Math.max(x: $.map(chartData, function(data){
@@ -16,7 +16,7 @@ else {
 			}))
 		}
 	
-	}
+	;}
 	
 	data = [{
 		x: $.map(chartData, function(data){
