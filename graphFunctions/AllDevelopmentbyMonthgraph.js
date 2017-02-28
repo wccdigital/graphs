@@ -243,8 +243,7 @@ else {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: xRange
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
