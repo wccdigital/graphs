@@ -45,6 +45,9 @@ else {
 
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
+alert("TimeframeConverted = "+TimeframeConverted);
+alert("xValues = "+xValues);
+
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
