@@ -6,6 +6,27 @@ if (chartData == null || chartData.length <= 0)
 		return;
 	
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
+var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
+
+if (timeframe_Development_by_Month == "Monthly") {
+	TimeframeConverted = "Citywide Months Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Months Longterm Months"];
+		})	
+	;}
+else if (timeframe_Development_by_Month == "Annually") {
+	TimeframeConverted = "Citywide Annual Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide All Dev Longterm Years"];
+		})	
+	;}	
+else {
+	TimeframeConverted = "Citywide Rolling Longterm ",
+	Xaxis = $.map(chartData, function(data){
+			return data["Citywide Months Longterm Months"];
+		})	
+	;}
+
 
 
 if (datatypetouse_Development_by_Month == "" || datatypetouse_Development_by_Month == "Total Dwellings Consented") {
@@ -17,7 +38,7 @@ if (datatypetouse_Development_by_Month == "" || datatypetouse_Development_by_Mon
 			return data["Citywide Months Longterm Months"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Total New Dwellings"];
+			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
 		type: 'bar',
 		marker: {color: Colour1}
@@ -38,7 +59,7 @@ else {
 			return data["Citywide Months Longterm Months"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["Citywide Months Longterm New Houses"];
+			return data[TimeframeConverted+"New Houses"];
 		}),
 		name: "Houses",
 		type: 'bar',
@@ -49,7 +70,7 @@ else {
 			return data["Citywide Months Longterm Months"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["Citywide Months Longterm New Units"];
+			return data[TimeframeConverted+"New Units"];
 		}),
 		name: "Units",
 		type: 'bar',
@@ -60,7 +81,7 @@ else {
 			return data["Citywide Months Longterm Months"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["Citywide Months Longterm New Apartments"];
+			return data[TimeframeConverted+"New Apartments"];
 		}),
 		name: "Apartments",
 		type: 'bar',
@@ -71,7 +92,7 @@ else {
 			return data["Citywide Months Longterm Months"];
 		}),
 		y: $.map(chartData, function(data){
-			return data["Citywide Months Longterm Retirement Village Units"];
+			return data[TimeframeConverted+"Retirement Village Units"];
 		}),
 		name: "Retirement Village Units",
 		type: 'bar',
