@@ -33,7 +33,7 @@ else if (timeframe_Development_by_Month == "Months") {
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
-			return data["Citywide Annual Longterm Years"];
+			return data["Citywide Years Longterm Years"];
 		})
 	;}	
 else {
