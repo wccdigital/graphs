@@ -48,6 +48,10 @@ TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
+yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"Total New Dwellings"];
+		});
+
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
@@ -66,7 +70,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			tickmode: 'auto',
 			tickangle: 45,
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - 1]-y[y.length - 1],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - 1]-yValues[yValues.length - 1],xValues[xValues.length - 1]]
 			},		
 		yaxis: {
 			zeroline: false,
