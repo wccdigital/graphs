@@ -11,42 +11,42 @@ if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Devel
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		}),
-	VisType = 'Bar'
+	VisType = 'bar'
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual RCs Years"];
 		}),
-	VisType = 'Bar'
+	VisType = 'bar'
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Rolling") {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		}),
-	VisType = 'Line'	
+	VisType = 'line'	
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		}),
-	VisType = 'Bar'
+	VisType = 'bar'
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
 		}),
-	VisType = 'Bar'	
+	VisType = 'bar'	
 	;}	
 else {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		}),
-	VisType = 'Line'
+	VisType = 'line'
 	;}
 
 	
