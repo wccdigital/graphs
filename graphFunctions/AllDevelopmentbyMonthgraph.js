@@ -210,6 +210,39 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		}
 	;}
 	
+else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
+
+	data = [{
+		x: Xvalues,
+		y: $.map(chartData, function(data){
+			return data[TimeframeConverted+"Constructed Dwellings"];
+		}),
+		name: "Constructed Dwellings",
+		type: VisType,
+		line: {width: 6,},
+		marker: {color: Colour1}
+        }];
+
+	layout = {
+		title: 'Constructed Dwellings',
+		showlegend: true,
+//		legend: {x: 0.8, y: 0.9},
+		legend : {orientation: 'h'},
+		xaxis: {
+			zeroline: false, 
+			tickmode: 'linear',
+			tick0: 0,
+			dtick: 2,
+			tickangle: 22.5, 
+			fixedrange: Zooming
+			},
+		yaxis: {
+			zeroline: false, 
+			fixedrange: Zooming
+			}
+		}
+	;}
+	
 		
 else {
 
