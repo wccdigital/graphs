@@ -6,82 +6,50 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
-if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Monthly") {
-	TimeframeConverted = "Citywide Months Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide All Months"];
-		}),
-	VisType = 'bar'
-	;}
-else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Annually") {
-	TimeframeConverted = "Citywide Annual Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Annual RCs Years"];
-		}),
-	VisType = 'bar'
-	;}
-else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Rolling") {
-	TimeframeConverted = "Citywide Rolling Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide All Months"];
-		}),
-	VisType = 'line'	
-	;}
 else if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Annually") {
-	TimeframeConverted = "Citywide Annual Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide CCC Years"];
-		}),
-	VisType = 'line'	
+	VisType = 'line',
+	xValues = $.map(chartData, function(data){
+			return data["Citywide Annual Longterm Years"];
+		})
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Annually") {
-	TimeframeConverted = "Citywide Annual Longterm ",
-	Xvalues = [2015, 2016],
-	VisType = 'line'	
-	;}
-else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Monthly") {
-	TimeframeConverted = "Citywide Months Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Subdivision Months"];
-		}),
-	VisType = 'bar'	
+	VisType = 'line',
+	xValues = $.map(chartData, function(data){
+			return data["Citywide Annual Longterm Years"];
+		})
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling") {
-	TimeframeConverted = "Citywide Rolling Longterm ",
-	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Subdivision Rolling Months"];
-		}),
-	VisType = 'bar'	
+	VisType = 'bar',
+	xValues = $.map(chartData, function(data){
+			return data["Citywide All Months"];
+		})
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
-	TimeframeConverted = "Citywide Months Longterm ",
-	Xvalues = $.map(chartData, function(data){
+	VisType = 'bar',
+	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
-	VisType = 'bar'
+		})
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
-	TimeframeConverted = "Citywide Annual Longterm ",
-	Xvalues = $.map(chartData, function(data){
+	VisType = 'bar',
+	xValues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
-		}),
-	VisType = 'bar'	
+		})
 	;}	
 else {
-	TimeframeConverted = "Citywide Rolling Longterm ",
-	Xvalues = $.map(chartData, function(data){
+	VisType = 'line',
+	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
-	VisType = 'line'
+		})
 	;}
 
-	
-	
+TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
+
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
 	data = [{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
@@ -91,13 +59,14 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
         }];
 
 	layout = {
-		title: 'Total Dwellings Consented by Month',
+		title: 'Total Dwellings Consented',
 		showlegend: false,
 		xaxis: {
 			zeroline: false,
 			tickmode: 'auto',
 			tickangle: 45,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - 1]-y[y.length - 1],xValues[xValues.length - 1]]
 			},		
 		yaxis: {
 			zeroline: false,
@@ -109,7 +78,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
 	data = [{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Houses"];
 		}),
@@ -119,7 +88,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour1}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Units"];
 		}),
@@ -129,7 +98,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour2}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Apartments"];
 		}),
@@ -139,7 +108,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour4}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Retirement Village Units"];
 		}),
@@ -149,7 +118,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour5}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
@@ -184,7 +153,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
 	data = [{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Residential Buildings"];
 		}),
@@ -194,7 +163,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		marker: {color: Colour1}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"NonResidential Construction"];
 		}),
@@ -204,7 +173,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		marker: {color: Colour2}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total Construction Value"];
 		}),
@@ -239,7 +208,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 
 	data = [{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Constructed Dwellings"];
 		}),
@@ -272,7 +241,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 else if (datatypetouse_Development_by_Month == "New Parcels") {
 
 	data = [{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		}),
@@ -305,7 +274,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 else {
 
 	data = [{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Land Use Consents"];
 		}),
@@ -315,7 +284,7 @@ else {
 		marker: {color: Colour1}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Subdivision Consents"];
 		}),
@@ -325,7 +294,7 @@ else {
 		marker: {color: Colour2}
 		
         },{
-		x: Xvalues,
+		x: xValues,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Combined Consents"];
 		}),
