@@ -6,19 +6,41 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
-if (timeframe_Development_by_Month == "Monthly") {
+if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
-	Xvalues = Xvalues	
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide RCs All Months"];
+		})		
+	;}
+else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Annually") {
+	TimeframeConverted = "Citywide Annual Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Annual RCs Years"];
+		})		
+	;}
+else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Rolling") {
+	TimeframeConverted = "Citywide Rolling Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Rolling RCs Months"];
+		})		
+	;}
+else if (timeframe_Development_by_Month == "Monthly") {
+	TimeframeConverted = "Citywide Months Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Months Longterm Months"];
+		})		
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
-			return data["Citywide All Dev Longterm Years"];
+			return data["Citywide Annual Longterm Years"];
 		})	
 	;}	
 else {
 	TimeframeConverted = "Citywide Rolling Longterm ",
-	Xaxis = Xvalues	
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide Rolling Longterm Months"];
+		})		
 	;}
 
 
@@ -43,8 +65,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			zeroline: false,
 			tickmode: 'auto',
 			tickangle: 45,
-			fixedrange: Zooming,
-			range: [MonthsLength-24.6,MonthsLength]
+			fixedrange: Zooming
 			},		
 		yaxis: {
 			zeroline: false,
@@ -105,8 +126,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming, 
-			range: [MonthsLength-24.6,MonthsLength]
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
@@ -161,8 +181,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming, 
-			range: [MonthsLength-24.6,MonthsLength]
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
@@ -215,8 +234,7 @@ else {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming, 
-			range: [MonthsLength-24.6,MonthsLength]
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
