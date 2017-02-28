@@ -14,7 +14,9 @@ else {
 	xRange = [2004, Math.max(Years)]
 	;}
 
-alert(xRange);
+alert(Math.max(Years));
+alert(Math.min(Years));
+alert([Math.max(Years), 1991];
 	
 	data = [{
 		x: Years,
