@@ -8,6 +8,9 @@ Years = $.map(chartData, function(data){
 			return data["Year"];
 			});
 
+	
+alert(Years);
+	
 if (DataType == "Consented Dwellings"){
 	xRange = [1991, Math.max(Years)]
 		;}
