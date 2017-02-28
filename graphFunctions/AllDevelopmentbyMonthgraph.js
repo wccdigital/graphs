@@ -190,7 +190,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			},
 		yaxis: {
 			zeroline: false, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
 			tickformat: '$,s', 
 			hoverformat: '$,.4s'
 			}
