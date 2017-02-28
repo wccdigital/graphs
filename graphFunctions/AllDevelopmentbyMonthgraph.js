@@ -27,6 +27,13 @@ else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_
 		}),
 	VisType = 'line'	
 	;}
+else if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Annually") {
+	TimeframeConverted = "Citywide Annual Longterm ",
+	Xvalues = $.map(chartData, function(data){
+			return data["Citywide CCC Years"];
+		}),
+	VisType = 'line'	
+	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
