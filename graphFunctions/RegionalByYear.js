@@ -21,7 +21,7 @@ data = [{
 	y: $.map(chartData, function(data){
 		return data[DataType.concat(" Wellington City")];
 	}),
-	type: 'bar',
+	type: 'line',
 	name: DataType.concat(" - Wellington City"),
 	marker: {color: Colour1}
 	
@@ -32,7 +32,7 @@ data = [{
 	y: $.map(chartData, function(data){
 		return data[DataType.concat(" Other TAs")];
 	}),
-	type: 'bar',
+	type: 'line',
 	name: DataType.concat(" - Other TAs"),
 	marker: {color: Colour2}
 	
@@ -43,7 +43,7 @@ data = [{
 	y: $.map(chartData, function(data){
 		return data[TotalVar];
 	}),
-	type: 'line',
+	type: 'bar',
 	name: TotalVar,
 	marker: {color: Colour3}
        }];
