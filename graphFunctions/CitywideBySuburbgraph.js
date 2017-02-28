@@ -21,7 +21,8 @@ var UnitsCollated = [];
 var ApartmentsCollated = [];
 var TotalDwellingsCollated = [];
 var RetirementVillageUnitsCollated = [];
-
+var ConstructionValueCollated = [];
+	
 
 for(i = (parseInt(StartYear_Citywide_by_SuburbValue)); i <= (parseInt(EndYear_Citywide_by_SuburbValue)); i++)
 	{
@@ -68,6 +69,15 @@ for(i = (parseInt(StartYear_Citywide_by_SuburbValue)); i <= (parseInt(EndYear_Ci
 			});
 		
 		RetirementVillageUnitsCollated = ArraySummation(RetirementVillageUnitsCollated, RetirementVillageUnitsThisYear);	
+
+		
+		ConstructionValueWithYear = "ConstructionValue".concat(i);
+
+		ConstructionValueThisYear = $.map(chartData, function(data){
+			return parseInt(data[ConstructionValueWithYear]);
+			});
+		
+		ConstructionValueCollated = ArraySummation(ConstructionValueCollated, ConstructionValueThisYear);		
 		
 	};	
  
@@ -135,7 +145,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 		}
 	;}
 
-else {
+else if (datatypetouse_Citywide_by_Suburb == "Consented Dwellings by Type") {
 
 	data = [{
 		x: SuburbsList,
@@ -183,6 +193,33 @@ else {
 		}
 	;}
 
+else {
+	data = [{
+		x: SuburbsList,
+		y: ConstructionValueCollated,
+		type: 'bar',
+		marker: {color: Colour1}
+        }];
+
+	layout = {
+		title: 'Total Construction Value by Suburb',
+		showlegend: false,
+		xaxis: {
+			zeroline: false,
+			tickmode: 'linear',
+			tick0: 0,
+			dtick: 1,
+			tickangle: 45,
+			categoryorder: 'category ascending',
+			fixedrange: Zooming},
+       		yaxis: {
+			zeroline: false,
+			tickformat: '$,s',
+			hoverformat: '$,.4s',
+			rangemode: "tozero",
+			fixedrange: Zooming}
+			}
+	;}
 	
 Plotly.newPlot('CitywideBySuburb', data, layout);
 
