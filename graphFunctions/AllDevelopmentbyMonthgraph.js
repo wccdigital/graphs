@@ -70,7 +70,7 @@ yValues = $.map(chartData, function(data){
 			tickmode: 'auto',
 			tickangle: 45,
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - 1]-yValues[yValues.length - 1],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
 			},		
 		yaxis: {
 			zeroline: false,
