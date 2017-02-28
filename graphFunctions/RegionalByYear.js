@@ -22,6 +22,7 @@ data = [{
 		return data[DataType.concat(" Wellington City")];
 	}),
 	type: 'line',
+	line: {width: 6},
 	name: DataType.concat(" - Wellington City"),
 	marker: {color: Colour1}
 	
@@ -33,6 +34,7 @@ data = [{
 		return data[DataType.concat(" Other TAs")];
 	}),
 	type: 'line',
+	line: {width: 6},
 	name: DataType.concat(" - Other TAs"),
 	marker: {color: Colour2}
 	
