@@ -89,7 +89,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Houses",
 		type: 'line',
-		line: {width: 6,},
+		line: {width: 5,},
 		marker: {color: Colour1}
 		
         },{
@@ -99,7 +99,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Units",
 		type: 'line',
-		line: {width: 6,},
+		line: {width: 5,},
 		marker: {color: Colour2}
 		
         },{
@@ -109,7 +109,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Apartments",
 		type: 'line',
-		line: {width: 6,},
+		line: {width: 5,},
 		marker: {color: Colour4}
 		
         },{
@@ -119,6 +119,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Retirement Village Units",
 		type: 'line',
+		line: {width: 5,},
 		marker: {color: Colour5}
 		
         },{
@@ -237,7 +238,7 @@ else {
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Combined Consents"];
 		}),
-		name: "Combined Land Use and Subdivision Consents",
+		name: "Combined Consents",
 		type: VisType,
 		line: {width: 6,},
 		marker: {color: Colour3}
