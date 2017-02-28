@@ -9,44 +9,42 @@ var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph optio
 if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
-			return data["Citywide RCs All Months"];
-		})		
-	xRange = [Xvalues.length-24.6,Xvalues.length]
+			return data["Citywide All Months"];
+		}),		
+
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual RCs Years"];
-		})		
-	xRange = [Math.min(Xvalues),Math.max(Xvalues)]
+		}),		
+	
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Rolling") {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Rolling RCs Months"];
-		})		
-	xRange = [Math.max(Xvalues)-24.6,Math.max(Xvalues)]
+			return data["Citywide All Months"];
+		}),		
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Months Longterm Months"];
-		})		
-	xRange = [Xvalues.length-24.6,Xvalues.length]
+			return data["Citywide All Months"];
+		}),		
+
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
-		})	
-	xRange = [Math.min(Xvalues),Math.max(Xvalues)]
+		}),	
+	
 	;}	
 else {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
-			return data["Citywide Rolling Longterm Months"];
-		})		
-	xRange = [Math.max(Xvalues)-24.6,Math.max(Xvalues)]
+			return data["Citywide All Months"];
+		}),		
 	;}
 
 	
@@ -71,13 +69,11 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			zeroline: false,
 			tickmode: 'auto',
 			tickangle: 45,
-			fixedrange: Zooming,
-			range: xRange
+			fixedrange: Zooming
 			},		
 		yaxis: {
 			zeroline: false,
-			fixedrange: Zooming,
-			range: [0,200]
+			fixedrange: Zooming
 			},
 		}
 	;}
@@ -132,14 +128,12 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: xRange
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming,
-			barmode: 'stack',
-			range: [0,200]
+			barmode: 'stack'
 			}
 		}
 	;}
@@ -187,8 +181,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: xRange
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
