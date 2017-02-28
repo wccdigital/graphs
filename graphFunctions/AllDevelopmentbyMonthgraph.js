@@ -6,7 +6,7 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
-else if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Annually") {
+if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Annually") {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
