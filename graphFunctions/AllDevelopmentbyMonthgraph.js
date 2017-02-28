@@ -6,31 +6,31 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
-if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Annually") {
+if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
 		})
 	;}
-else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Annually") {
+else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Years") {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
 		})
 	;}
-else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling") {
+else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling Average") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		})
 	;}
-else if (timeframe_Development_by_Month == "Monthly") {
+else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		})
 	;}
-else if (timeframe_Development_by_Month == "Annually") {
+else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
@@ -44,9 +44,6 @@ else {
 	;}
 
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
-
-alert("TimeframeConverted = "+TimeframeConverted);
-alert("xValues = "+xValues);
 
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
