@@ -70,7 +70,7 @@ yValues = $.map(chartData, function(data){
 			tickmode: 'auto',
 			tickangle: 45,
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},		
 		yaxis: {
 			zeroline: false,
@@ -148,7 +148,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -208,7 +208,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -248,7 +248,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -286,7 +286,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -346,7 +346,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
