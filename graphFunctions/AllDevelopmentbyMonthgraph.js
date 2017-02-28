@@ -10,46 +10,40 @@ if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Devel
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),		
-
+		})		
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual RCs Years"];
-		}),		
-	
+		})	
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Rolling") {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),		
+		})	
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),		
-
+		})
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
-		}),	
-	
+		})	
 	;}	
 else {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),		
+		})
 	;}
 
 	
-
-
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
