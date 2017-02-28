@@ -41,40 +41,7 @@ var graphdata = [{
 			},{
 				text : "Choose a data type",
 				id : "datatypedd_CitywideBySuburbgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type"]
-			}
-		],
-		link : [
-			{
-				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/wccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv"
-			}
-		]
-	}, {
-		name : "Citywide By Suburb Consented Value Information",
-		id : "CitywideBySubConsentedValue",
-		container : "CitywideBySuburbConsentedValue",
-		width : "100%",
-		height : "500px",
-		csv : "/wccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv",
-		func : "CitywideBySuburbConsentedValuegraph",
-		funcFile : "/wccgraphs/graphFunctions/CitywideBySuburbConsentedValuegraph.js",
- 		button : [
-			{
-				text : "Sort by Distance to CBD / Alphabetically",
-				id : "SortTypeConsentedValue"
-			}
-		],
-		drop : [
-			{
-				text : "Start year",
-				id : "dropdownStartYear_Citywide_by_Suburb",
-				valtext : ["2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004"]
-			},{
-				text : "End year",
-				id : "dropdownEndYear_Citywide_by_Suburb",
-				valtext : ["2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004"]
+				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction"]
 			}
 		],
 		link : [
