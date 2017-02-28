@@ -14,11 +14,7 @@ else {
 	xRange = [2004, Years[Years.length - 1]]
 	;}
 
-alert(Math.max(Years));
-alert(Math.min(Years));
-alert([Math.max(Years), 1991];
-	
-	data = [{
+data = [{
 		x: Years,
 		y: $.map(chartData, function(data){
 			return data[DataType];
@@ -52,7 +48,7 @@ alert([Math.max(Years), 1991];
 		}];
 
 		
-	layout = {
+layout = {
 		title: DataType+' and Population Growth',
 		showlegend: true,
 //		legend: {orientation: 'h'},
