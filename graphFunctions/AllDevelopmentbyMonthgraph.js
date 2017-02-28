@@ -60,6 +60,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
 		type: VisType,
+		line: {width: 6,},
 		marker: {color: Colour1}
         }];
 
@@ -88,6 +89,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Houses",
 		type: 'line',
+		line: {width: 6,},
 		marker: {color: Colour1}
 		
         },{
@@ -97,6 +99,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Units",
 		type: 'line',
+		line: {width: 6,},
 		marker: {color: Colour2}
 		
         },{
@@ -106,7 +109,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Apartments",
 		type: 'line',
-		marker: {color: Colour3}
+		line: {width: 6,},
+		marker: {color: Colour4}
 		
         },{
 		x: Xvalues,
@@ -115,7 +119,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		}),
 		name: "Retirement Village Units",
 		type: 'line',
-		marker: {color: Colour4}
+		marker: {color: Colour5}
 		
         },{
 		x: Xvalues,
@@ -125,7 +129,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		name: "Total New Dwellings",
 		type: 'bar',
 		opacity: 0.7,
-		marker:{color:'#AAAAAA'},
+		marker: {color: Colour3}
         }];
 
 	layout = {
@@ -177,8 +181,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		}),
 		name: "Total Construction Value",
 		type: 'line',
+		line: {width: 6,},
 		marker: {color: Colour3}
-		
         }];
 
 	layout = {
@@ -213,6 +217,7 @@ else {
 		}),
 		name: "Land Use Consents",
 		type: VisType,
+		line: {width: 6,},
 		marker: {color: Colour1}
 		
         },{
@@ -222,6 +227,7 @@ else {
 		}),
 		name: "Subdivision Consents",
 		type: VisType,
+		line: {width: 6,},
 		marker: {color: Colour2}
 		
         },{
@@ -231,6 +237,7 @@ else {
 		}),
 		name: "Combined Land Use and Subdivision Consents",
 		type: VisType,
+		line: {width: 6,},
 		marker: {color: Colour3}
 		
         }];
