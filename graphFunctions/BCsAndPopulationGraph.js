@@ -8,10 +8,10 @@ Years = $.map(chartData, function(data){
 			});
 
 if (DataType == "Consented Dwellings"){
-	xRange = [1991, Years[Years.length - 1]]
+	xRange = [1990.5, Years[Years.length - 1]]
 		;}
 else {
-	xRange = [2004, Years[Years.length - 1]]
+	xRange = [2003.5, Years[Years.length - 1]]
 	;}
 
 data = [{
@@ -30,7 +30,7 @@ data = [{
 		}),
 		type: 'bar',
 		connectgaps: true,
-		name: 'Consented Housing Capacity',
+		name: DataType+" Capacity",
 		marker: {color: Colour3}	
 		
         },{
