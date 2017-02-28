@@ -11,43 +11,49 @@ if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Devel
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide RCs All Months"];
 		})		
+	xRange = [Xvalues.length-24.6,Xvalues.length]
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual RCs Years"];
 		})		
+	xRange = [Math.min(Xvalues),Math.max(Xvalues)]
 	;}
 else if (datatypetouse_Development_by_Month == "Resource Consents" && timeframe_Development_by_Month == "Rolling") {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Rolling RCs Months"];
 		})		
+	xRange = [Xvalues.length-24.6,Xvalues.length]
 	;}
 else if (timeframe_Development_by_Month == "Monthly") {
 	TimeframeConverted = "Citywide Months Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Months Longterm Months"];
 		})		
+	xRange = [Xvalues.length-24.6,Xvalues.length]
 	;}
 else if (timeframe_Development_by_Month == "Annually") {
 	TimeframeConverted = "Citywide Annual Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Annual Longterm Years"];
 		})	
+	xRange = [Math.min(Xvalues),Math.max(Xvalues)]
 	;}	
 else {
 	TimeframeConverted = "Citywide Rolling Longterm ",
 	Xvalues = $.map(chartData, function(data){
 			return data["Citywide Rolling Longterm Months"];
 		})		
+	xRange = [Xvalues.length-24.6,Xvalues.length]
 	;}
+
+	
 
 
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
-
-	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length
 
 	data = [{
 		x: Xvalues,
@@ -65,7 +71,8 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			zeroline: false,
 			tickmode: 'auto',
 			tickangle: 45,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: xRange
 			},		
 		yaxis: {
 			zeroline: false,
@@ -113,10 +120,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		marker: {color: Colour4}
         }];
 
-	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length 
-	
 	layout = {
-		title: 'Consented Dwellings by Type and Month',
+		title: 'Consented Dwellings by Type',
 		showlegend: true,
 //		legend: {x: 0.8, y: 0.9},
 		legend : {orientation: 'h'},
@@ -126,7 +131,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: xRange
 			},
 		yaxis: {
 			zeroline: false, 
@@ -168,10 +174,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		
         }];
 
-	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length 
-	
 	layout = {
-		title: 'Consented Dwellings by Type and Month',
+		title: 'Value of Consented Construction',
 		showlegend: true,
 //		legend: {x: 0.8, y: 0.9},
 		legend : {orientation: 'h'},
@@ -181,15 +185,19 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: xRange
 			},
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming
+			tickformat: '$,s', 
+			hoverformat: '$,.4s'}
 			}
 		}
 	;}
-
+	
+		
 else {
 
 	data = [{
@@ -221,25 +229,24 @@ else {
 		
         }];
 
-	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length 
-	
 	layout = {
-		title: 'Consented Dwellings by Type and Month',
+		title: 'Resource Consents',
 		showlegend: true,
 //		legend: {x: 0.8, y: 0.9},
 		legend : {orientation: 'h'},
+		barmode: 'stack',
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: xRange
 			},
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming, 
-			barmode: 'stack'
 			}
 		}
 	;}
