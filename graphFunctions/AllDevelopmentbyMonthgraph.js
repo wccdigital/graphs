@@ -81,6 +81,10 @@ yValues = $.map(chartData, function(data){
 
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
+yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"New Houses"];
+		});
+
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
@@ -143,7 +147,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -155,6 +160,10 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
 	
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
+
+yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"Residential Buildings"];
+		});
 
 	data = [{
 		x: xValues,
@@ -198,7 +207,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -210,6 +220,10 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 	;}
 	
 else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
+
+yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"Constructed Dwellings"];
+		});
 
 	data = [{
 		x: xValues,
@@ -233,7 +247,8 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -243,6 +258,10 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	;}
 	
 else if (datatypetouse_Development_by_Month == "New Parcels") {
+
+yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"New Parcels"];
+		});
 
 	data = [{
 		x: xValues,
@@ -266,7 +285,8 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -276,6 +296,10 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 	;}	
 		
 else {
+
+yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"Land Use Consents"];
+		});
 
 	data = [{
 		x: xValues,
@@ -321,7 +345,8 @@ else {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
