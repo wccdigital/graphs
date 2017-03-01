@@ -227,6 +227,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		name: "Total Construction Value",
 		type: 'line',
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour3}
         }];
 
@@ -282,7 +283,8 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming			},
+			fixedrange: Zooming			
+			},
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming
