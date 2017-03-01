@@ -272,8 +272,6 @@ while (i--) {
 	}
 
 NonEmptyLength = yValues.length-TempCount;
-alert("non-empty: "+NonEmptyLength);
-alert([xValues[xValues.length - NonEmptyLength],xValues[xValues.length - 1]+0.5]);
 
 	data = [{
 		x: xValues,
@@ -358,7 +356,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
