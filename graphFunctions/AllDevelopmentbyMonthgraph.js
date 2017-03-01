@@ -265,10 +265,10 @@ yValues = $.map(chartData, function(data){
 	
 	
 TempCount = 0;
-i = arr.length;
+i = yValues.length;
 
 while (i--) {
-    if (typeof arr[i] === "undefined")
+    if (typeof yValues[i] === "undefined")
         TempCount++;
 	}
 
