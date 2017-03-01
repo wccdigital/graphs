@@ -271,8 +271,8 @@ while (i--) {
         TempCount++;
 	}
 
-NonEmptyLength = yValues.length-TempCount
-alert("non-empty: "+NonEmptyLength)
+NonEmptyLength = yValues.length-TempCount;
+alert("non-empty: "+NonEmptyLength);
 
 	data = [{
 		x: xValues,
@@ -306,7 +306,7 @@ alert("non-empty: "+NonEmptyLength)
 		}
 	;}	
 	
-alert("Range: "+range)
+alert("Range: "+range);
 	
 else {
 
