@@ -169,6 +169,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		})).slice(StartPoint,EndPoint),
 		name: "Total",
 		type: 'bar',
+		connectgaps: true,
 		opacity: 0.7,
 		marker: {color: Colour3}
         }];
