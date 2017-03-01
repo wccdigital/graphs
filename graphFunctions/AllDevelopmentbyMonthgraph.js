@@ -273,6 +273,8 @@ while (i--) {
 
 NonEmptyLength = yValues.length-TempCount;
 
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
@@ -296,7 +298,7 @@ NonEmptyLength = yValues.length-TempCount;
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - NonEmptyLength],xValues[xValues.length - 1]+0.5]
+			range: xRange
 			},
 		yaxis: {
 			zeroline: false, 
@@ -311,6 +313,7 @@ yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Land Use Consents"];
 		});
 
+		
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
