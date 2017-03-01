@@ -60,7 +60,13 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			TempCount++;
 		}
 
-	var NonEmptyLength = yValues.length-TempCount;
+	if (yValues[0] == '') {
+		var NonEmptyLength = yValues.length-TempCount;
+		}
+	else {
+		var NonEmptyLength = yValues.length;
+		}
+
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	alert(($.map(chartData, function(data){
