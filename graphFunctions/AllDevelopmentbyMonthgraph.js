@@ -263,17 +263,16 @@ yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		});
 	
-	
 TempCount = 0;
 i = yValues.length;
 
 while (i--) {
-    if (typeof yValues[i] === "undefined")
+    if (yValues[i] == '')
         TempCount++;
-	};
+	}
 
-alert("Count = "+TempCount);
-      
+NonEmptyLength = yValues.length-TempCount
+
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
@@ -297,7 +296,7 @@ alert("Count = "+TempCount);
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
+			range: [xValues[xValues.length - NonEmptyLength],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
