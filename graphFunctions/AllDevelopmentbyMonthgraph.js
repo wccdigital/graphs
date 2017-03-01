@@ -63,6 +63,11 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 	var NonEmptyLength = yValues.length-TempCount;
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
+	alert(($.map(chartData, function(data){
+			return data[TimeframeConverted+"Total New Dwellings"];
+		})).slice(xValues.length-NonEmptyLength,xValues.length))
+	
+	
 	data = [{
 		x: xRange,
 		y: ($.map(chartData, function(data){
