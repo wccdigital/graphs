@@ -270,8 +270,9 @@ i = yValues.length;
 while (i--) {
     if (typeof yValues[i] === "undefined")
         TempCount++;
-	}
+	};
 
+alert("Count = "+TempCount);
       
 	data = [{
 		x: xValues,
