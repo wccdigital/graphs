@@ -262,11 +262,9 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		});
-
-alert("yValues: "+yValues);
-alert("rangeStart"+xValues[xValues.length - yValues.length]);
 	
-alert("NewWay: "+yValues.filter(function(x){ return true }).length;);
+yNonEmptylength = yValues.filter(function(x){ return true }).length;	
+alert("NewWay: "+ yNonEmptylength);
       
 	data = [{
 		x: xValues,
