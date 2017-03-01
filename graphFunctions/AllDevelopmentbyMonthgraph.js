@@ -69,11 +69,6 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
-	alert(($.map(chartData, function(data){
-			return data[TimeframeConverted+"Total New Dwellings"];
-		})).slice(xValues.length-NonEmptyLength,xValues.length))
-	
-	
 	data = [{
 		x: xRange,
 		y: ($.map(chartData, function(data){
@@ -114,7 +109,13 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			TempCount++;
 		}
 
-	var NonEmptyLength = yValues.length-TempCount;
+	if (yValues[0] == '') {
+		var NonEmptyLength = yValues.length-TempCount;
+		}
+	else {
+		var NonEmptyLength = yValues.length;
+		}
+
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
@@ -204,7 +205,13 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			TempCount++;
 		}
 
-	var NonEmptyLength = yValues.length-TempCount;
+	if (yValues[0] == '') {
+		var NonEmptyLength = yValues.length-TempCount;
+		}
+	else {
+		var NonEmptyLength = yValues.length;
+		}
+
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
@@ -274,7 +281,13 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			TempCount++;
 		}
 
-	var NonEmptyLength = yValues.length-TempCount;
+	if (yValues[0] == '') {
+		var NonEmptyLength = yValues.length-TempCount;
+		}
+	else {
+		var NonEmptyLength = yValues.length;
+		}
+
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
@@ -321,7 +334,13 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 			TempCount++;
 		}
 
-	var NonEmptyLength = yValues.length-TempCount;
+	if (yValues[0] == '') {
+		var NonEmptyLength = yValues.length-TempCount;
+		}
+	else {
+		var NonEmptyLength = yValues.length;
+		}
+
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
@@ -369,7 +388,13 @@ else {
 			TempCount++;
 		}
 
-	var NonEmptyLength = yValues.length-TempCount;
+	if (yValues[0] == '') {
+		var NonEmptyLength = yValues.length-TempCount;
+		}
+	else {
+		var NonEmptyLength = yValues.length;
+		}
+
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
