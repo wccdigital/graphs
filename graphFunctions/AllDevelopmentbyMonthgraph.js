@@ -263,8 +263,7 @@ yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		});
 	
-var yNonEmptylength = yValues.filter(function(x){ return true }).length;	
-alert("NewWay: "+ yNonEmptylength);
+
       
 	data = [{
 		x: xValues,
