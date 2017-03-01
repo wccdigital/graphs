@@ -279,7 +279,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
-		}),
+		}).slice(xValues.length-NonEmptyLength,xValues.length),
 		name: "New Parcels",
 		type: VisType,
 		line: {width: 6,},
