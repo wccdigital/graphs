@@ -44,29 +44,14 @@ else {
 	;}
 
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
+var NonEmptyLength;
+var StartPoint;
+var EndPoint;
+var xRange = [];
 
 
-if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
-
-	var yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Total New Dwellings"];
-		});
+function ValuesExtract(yValues, xValues){
 	
-	var TempCount = 0;
-	var i = yValues.length;
-
-	while (i--) {
-		if (yValues[i] == '')
-			TempCount++;
-		}
-
-	if (yValues[0] == '') {
-		var NonEmptyLength = yValues.length-TempCount;
-		}
-	else {
-		var NonEmptyLength = yValues.length;
-		}
-
 	var i = 0;
 	var stop = 0;
 	var startingpoint = 0;
@@ -83,9 +68,20 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			NonEmptyLength = yValues.length-startingpoint
 			;}
 		;}
+		
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);	
+
+StartPoint = xValues.length-NonEmptyLength;
+EndPoint = xValues.length;
+	;}
 
 	
-	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
+
+	var yValues = $.map(chartData, function(data){
+			return data[TimeframeConverted+"Total New Dwellings"];
+		});
+	ValuesExtract(yValues, xValues);
 
 	data = [{
 		x: xRange,
@@ -118,23 +114,9 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"New Houses"];
 		});
-	
-	var TempCount = 0;
-	var i = yValues.length;
+		
+	ValuesExtract(yValues, xValues);
 
-	while (i--) {
-		if (yValues[i] == '')
-			TempCount++;
-		}
-
-	if (yValues[0] == '') {
-		var NonEmptyLength = yValues.length-TempCount;
-		}
-	else {
-		var NonEmptyLength = yValues.length;
-		}
-
-	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -215,22 +197,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		return data[TimeframeConverted+"Residential Buildings"];
 		});
 	
-	var TempCount = 0;
-	var i = yValues.length;
+	ValuesExtract(yValues, xValues);
 
-	while (i--) {
-		if (yValues[i] == '')
-			TempCount++;
-		}
-
-	if (yValues[0] == '') {
-		var NonEmptyLength = yValues.length-TempCount;
-		}
-	else {
-		var NonEmptyLength = yValues.length;
-		}
-
-	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -291,22 +259,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		return data[TimeframeConverted+"Constructed Dwellings"];
 		});
 	
-	var TempCount = 0;
-	var i = yValues.length;
-
-	while (i--) {
-		if (yValues[i] == '')
-			TempCount++;
-		}
-
-	if (yValues[0] == '') {
-		var NonEmptyLength = yValues.length-TempCount;
-		}
-	else {
-		var NonEmptyLength = yValues.length;
-		}
-
-	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	ValuesExtract(yValues, xValues);
 
 	data = [{
 		x: xRange,
@@ -344,22 +297,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 		return data[TimeframeConverted+"New Parcels"];
 		});
 	
-	var TempCount = 0;
-	var i = yValues.length;
-
-	while (i--) {
-		if (yValues[i] == '')
-			TempCount++;
-		}
-
-	if (yValues[0] == '') {
-		var NonEmptyLength = yValues.length-TempCount;
-		}
-	else {
-		var NonEmptyLength = yValues.length;
-		}
-
-	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	ValuesExtract(yValues, xValues);
 
 	data = [{
 		x: xRange,
@@ -398,22 +336,7 @@ else {
 		return data[TimeframeConverted+"Land Use Consents"];
 		});
 	
-	var TempCount = 0;
-	var i = yValues.length;
-
-	while (i--) {
-		if (yValues[i] == '')
-			TempCount++;
-		}
-
-	if (yValues[0] == '') {
-		var NonEmptyLength = yValues.length-TempCount;
-		}
-	else {
-		var NonEmptyLength = yValues.length;
-		}
-
-	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	ValuesExtract(yValues, xValues);
 
 	data = [{
 		x: xRange,
