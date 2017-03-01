@@ -167,7 +167,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		y: ($.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		})).slice(StartPoint,EndPoint),
-		name: "Total New Dwellings",
+		name: "Total",
 		type: 'bar',
 		opacity: 0.7,
 		marker: {color: Colour3}
@@ -220,7 +220,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		y: ($.map(chartData, function(data){
 			return data[TimeframeConverted+"NonResidential Construction"];
 		})).slice(StartPoint,EndPoint),
-		name: "NonResidential Construction",
+		name: "Non-Residential Construction",
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
@@ -282,9 +282,9 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 
 	layout = {
 		title: 'Constructed Dwellings',
-		showlegend: true,
+		showlegend: false,
 //		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h'},
+//		legend : {orientation: 'h'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
@@ -327,9 +327,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 		legend : {orientation: 'h'},
 		xaxis: {
 			zeroline: false, 
-			tickmode: 'linear',
-			tick0: 0,
-			dtick: 2,
+			tickmode: 'auto',
 			tickangle: 22.5, 
 			fixedrange: Zooming
 			},
@@ -390,9 +388,7 @@ else {
 		barmode: 'stack',
 		xaxis: {
 			zeroline: false, 
-			tickmode: 'linear',
-			tick0: 0,
-			dtick: 2,
+			tickmode: 'auto',
 			tickangle: 22.5, 
 			fixedrange: Zooming
 			},
