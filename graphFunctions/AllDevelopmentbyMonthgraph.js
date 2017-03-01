@@ -275,6 +275,8 @@ NonEmptyLength = yValues.length-TempCount;
 
 xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
+alert(xRange);
+	
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
