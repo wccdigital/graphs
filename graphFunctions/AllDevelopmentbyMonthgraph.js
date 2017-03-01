@@ -275,10 +275,8 @@ NonEmptyLength = yValues.length-TempCount;
 
 xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
-alert(xRange);
-	
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		}),
@@ -299,8 +297,7 @@ alert(xRange);
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: xRange
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
