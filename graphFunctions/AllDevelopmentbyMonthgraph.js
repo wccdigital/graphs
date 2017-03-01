@@ -9,13 +9,13 @@ var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph optio
 if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
-			return data["Citywide Annual Longterm Years"];
+			return data["Citywide Years Longterm Years"];
 		})
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Years") {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
-			return data["Citywide Annual Longterm Years"];
+			return data["Citywide Years Longterm Years"];
 		})
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling Average") {
@@ -48,20 +48,20 @@ TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
-	yValues = $.map(chartData, function(data){
+	var yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		});
 	
-	TempCount = 0;
-	i = yValues.length;
+	var TempCount = 0;
+	var i = yValues.length;
 
 	while (i--) {
 		if (yValues[i] == '')
 			TempCount++;
 		}
 
-	NonEmptyLength = yValues.length-TempCount;
-	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	var NonEmptyLength = yValues.length-TempCount;
+	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -91,20 +91,20 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
-	yValues = $.map(chartData, function(data){
+	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"New Houses"];
 		});
 	
-	TempCount = 0;
-	i = yValues.length;
+	var TempCount = 0;
+	var i = yValues.length;
 
 	while (i--) {
 		if (yValues[i] == '')
 			TempCount++;
 		}
 
-	NonEmptyLength = yValues.length-TempCount;
-	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	var NonEmptyLength = yValues.length-TempCount;
+	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -181,20 +181,20 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
-	yValues = $.map(chartData, function(data){
+	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Residential Buildings"];
 		});
 	
-	TempCount = 0;
-	i = yValues.length;
+	var TempCount = 0;
+	var i = yValues.length;
 
 	while (i--) {
 		if (yValues[i] == '')
 			TempCount++;
 		}
 
-	NonEmptyLength = yValues.length-TempCount;
-	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	var NonEmptyLength = yValues.length-TempCount;
+	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -251,20 +251,20 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 	
 else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 
-	yValues = $.map(chartData, function(data){
+	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Constructed Dwellings"];
 		});
 	
-	TempCount = 0;
-	i = yValues.length;
+	var TempCount = 0;
+	var i = yValues.length;
 
 	while (i--) {
 		if (yValues[i] == '')
 			TempCount++;
 		}
 
-	NonEmptyLength = yValues.length-TempCount;
-	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	var NonEmptyLength = yValues.length-TempCount;
+	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -298,20 +298,20 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	
 else if (datatypetouse_Development_by_Month == "New Parcels") {
 
-	yValues = $.map(chartData, function(data){
+	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"New Parcels"];
 		});
 	
-	TempCount = 0;
-	i = yValues.length;
+	var TempCount = 0;
+	var i = yValues.length;
 
 	while (i--) {
 		if (yValues[i] == '')
 			TempCount++;
 		}
 
-	NonEmptyLength = yValues.length-TempCount;
-	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	var NonEmptyLength = yValues.length-TempCount;
+	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -346,20 +346,20 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 	
 else {
 
-	yValues = $.map(chartData, function(data){
+	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Land Use Consents"];
 		});
 	
-	TempCount = 0;
-	i = yValues.length;
+	var TempCount = 0;
+	var i = yValues.length;
 
 	while (i--) {
 		if (yValues[i] == '')
 			TempCount++;
 		}
 
-	NonEmptyLength = yValues.length-TempCount;
-	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	var NonEmptyLength = yValues.length-TempCount;
+	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
