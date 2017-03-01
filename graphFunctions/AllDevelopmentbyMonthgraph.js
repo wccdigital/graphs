@@ -67,6 +67,24 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		var NonEmptyLength = yValues.length;
 		}
 
+	var i = 0;
+	var stop = 0;
+	var startingpoint = 0;
+	
+	while (stop == 0){
+		if (yValues[i] == '')
+			{
+			i++
+ 		 	;}
+		else 
+			{
+			startingpoint = i,
+			stop = 1
+			NonEmptyLength = yValues.length-startingpoint
+			;}
+		;}
+
+	
 	var xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
