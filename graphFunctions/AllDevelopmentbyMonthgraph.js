@@ -70,7 +70,7 @@ yValues = $.map(chartData, function(data){
 			tickmode: 'auto',
 			tickangle: 45,
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},		
 		yaxis: {
 			zeroline: false,
@@ -148,7 +148,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -208,7 +208,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -248,7 +248,7 @@ yValues = $.map(chartData, function(data){
 			dtick: 2,
 			tickangle: 22.5, 
 			fixedrange: Zooming,
-			range: [xValues[xValues.length - (yValues[yValues.length - 1])],xValues[xValues.length - 1]]
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
 			},
 		yaxis: {
 			zeroline: false, 
@@ -262,12 +262,24 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
 		});
+	
+TempCount = 0;
+i = yValues.length;
+
+while (i--) {
+    if (yValues[i] == '')
+        TempCount++;
+	}
+
+NonEmptyLength = yValues.length-TempCount;
+
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
-		}),
+		}).slice(xValues.length-NonEmptyLength,xValues.length),
 		name: "New Parcels",
 		type: VisType,
 		line: {width: 6,},
@@ -285,8 +297,7 @@ yValues = $.map(chartData, function(data){
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: ['July 2014','Dec 2016']
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
@@ -294,13 +305,14 @@ yValues = $.map(chartData, function(data){
 			}
 		}
 	;}	
-		
+	
 else {
 
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Land Use Consents"];
 		});
 
+		
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
@@ -345,7 +357,8 @@ yValues = $.map(chartData, function(data){
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]]
 			},
 		yaxis: {
 			zeroline: false, 
