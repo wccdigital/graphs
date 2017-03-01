@@ -51,9 +51,21 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		});
+	
+TempCount = 0;
+i = yValues.length;
+
+while (i--) {
+    if (yValues[i] == '')
+        TempCount++;
+	}
+
+NonEmptyLength = yValues.length-TempCount;
+
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
@@ -84,9 +96,21 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Houses"];
 		});
+	
+TempCount = 0;
+i = yValues.length;
+
+while (i--) {
+    if (yValues[i] == '')
+        TempCount++;
+	}
+
+NonEmptyLength = yValues.length-TempCount;
+
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Houses"];
 		}),
@@ -164,9 +188,21 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Residential Buildings"];
 		});
+	
+TempCount = 0;
+i = yValues.length;
+
+while (i--) {
+    if (yValues[i] == '')
+        TempCount++;
+	}
+
+NonEmptyLength = yValues.length-TempCount;
+
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Residential Buildings"];
 		}),
@@ -224,9 +260,21 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Constructed Dwellings"];
 		});
+	
+TempCount = 0;
+i = yValues.length;
+
+while (i--) {
+    if (yValues[i] == '')
+        TempCount++;
+	}
+
+NonEmptyLength = yValues.length-TempCount;
+
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Constructed Dwellings"];
 		}),
@@ -311,10 +359,21 @@ else {
 yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Land Use Consents"];
 		});
+	
+TempCount = 0;
+i = yValues.length;
 
-		
+while (i--) {
+    if (yValues[i] == '')
+        TempCount++;
+	}
+
+NonEmptyLength = yValues.length-TempCount;
+
+xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+
 	data = [{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Land Use Consents"];
 		}),
