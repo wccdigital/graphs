@@ -110,7 +110,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		x: xRange,
 		y: ($.map(chartData, function(data){
 			return data[TimeframeConverted+"New Houses"];
-		}))).slice(xValues.length-NonEmptyLength,xValues.length),
+		})).slice(xValues.length-NonEmptyLength,xValues.length),
 		name: "Houses",
 		type: 'line',
 		line: {width: 5,},
