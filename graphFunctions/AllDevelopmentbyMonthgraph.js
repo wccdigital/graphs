@@ -161,7 +161,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		connectgaps: true,
 		line: {width: 5,},
 		marker: {color: Colour5}
-		
+		 
         },{
 		x: xRange,
 		y: ($.map(chartData, function(data){
@@ -177,7 +177,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		title: 'Consented Dwellings by Type',
 		showlegend: true,
 //		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h'},
+		legend : {orientation: 'h', y: '-0.1'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
@@ -242,7 +242,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		title: 'Value of Consented Construction',
 		showlegend: true,
 //		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h'},
+		legend : {orientation: 'h', y: '-0.1'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
@@ -284,7 +284,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		title: 'Constructed Dwellings',
 		showlegend: false,
 //		legend: {x: 0.8, y: 0.9},
-//		legend : {orientation: 'h'},
+//		legend : {orientation: 'h', y: '-0.1'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
@@ -324,7 +324,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 		title: 'New Parcels',
 		showlegend: false,
 //		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h'},
+		legend : {orientation: 'h', y: '-0.1'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'auto',
@@ -384,7 +384,7 @@ else {
 		title: 'Resource Consents',
 		showlegend: true,
 //		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h'},
+		legend : {orientation: 'h', y: '-0.1'},
 		barmode: 'stack',
 		xaxis: {
 			zeroline: false, 
