@@ -89,6 +89,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		})).slice(StartPoint,EndPoint),
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour1}
         }];
 
@@ -124,6 +125,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		})).slice(StartPoint,EndPoint),
 		name: "Houses",
 		type: 'line',
+		connectgaps: true,
 		line: {width: 5,},
 		marker: {color: Colour1}
 		
@@ -134,6 +136,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		})).slice(StartPoint,EndPoint),
 		name: "Units",
 		type: 'line',
+		connectgaps: true,
 		line: {width: 5,},
 		marker: {color: Colour2}
 		
@@ -144,6 +147,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		})).slice(StartPoint,EndPoint),
 		name: "Apartments",
 		type: 'line',
+		connectgaps: true,
 		line: {width: 5,},
 		marker: {color: Colour4}
 		
@@ -154,6 +158,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		})).slice(StartPoint,EndPoint),
 		name: "Retirement Village Units",
 		type: 'line',
+		connectgaps: true,
 		line: {width: 5,},
 		marker: {color: Colour5}
 		
@@ -207,6 +212,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		name: "Residential Buildings",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour1}
 		
         },{
@@ -217,6 +223,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		name: "NonResidential Construction",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour2}
 		
         },{
@@ -269,6 +276,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		name: "Constructed Dwellings",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour1}
         }];
 
@@ -308,6 +316,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 		name: "New Parcels",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour1}
         }];
 
@@ -347,6 +356,7 @@ else {
 		name: "Land Use Consents",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour1}
 		
         },{
@@ -357,6 +367,7 @@ else {
 		name: "Subdivision Consents",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour2}
 		
         },{
@@ -367,6 +378,7 @@ else {
 		name: "Combined Consents",
 		type: VisType,
 		line: {width: 6,},
+		connectgaps: true,
 		marker: {color: Colour3}
         }];
 
