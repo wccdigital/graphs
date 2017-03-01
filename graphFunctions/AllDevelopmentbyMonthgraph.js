@@ -317,7 +317,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 		x: xRange,
 		y: ($.map(chartData, function(data){
 			return data[TimeframeConverted+"New Parcels"];
-		}).slice(xValues.length-NonEmptyLength,xValues.length),
+		})).slice(xValues.length-NonEmptyLength,xValues.length),
 		name: "New Parcels",
 		type: VisType,
 		line: {width: 6,},
