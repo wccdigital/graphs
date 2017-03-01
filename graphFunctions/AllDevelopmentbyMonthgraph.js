@@ -272,6 +272,7 @@ while (i--) {
 	}
 
 NonEmptyLength = yValues.length-TempCount
+alert("non-empty: "+NonEmptyLength)
 
 	data = [{
 		x: xValues,
@@ -304,7 +305,9 @@ NonEmptyLength = yValues.length-TempCount
 			}
 		}
 	;}	
-		
+	
+alert("Range: "+range)
+	
 else {
 
 yValues = $.map(chartData, function(data){
