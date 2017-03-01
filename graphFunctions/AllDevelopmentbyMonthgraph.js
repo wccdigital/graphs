@@ -48,21 +48,20 @@ TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
-yValues = $.map(chartData, function(data){
+	yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		});
 	
-TempCount = 0;
-i = yValues.length;
+	TempCount = 0;
+	i = yValues.length;
 
-while (i--) {
-    if (yValues[i] == '')
-        TempCount++;
-	}
+	while (i--) {
+		if (yValues[i] == '')
+			TempCount++;
+		}
 
-NonEmptyLength = yValues.length-TempCount;
-
-xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	NonEmptyLength = yValues.length-TempCount;
+	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -81,8 +80,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 			zeroline: false,
 			tickmode: 'auto',
 			tickangle: 45,
-			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
+			fixedrange: Zooming
 			},		
 		yaxis: {
 			zeroline: false,
@@ -93,21 +91,20 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
-yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"New Houses"];
+	yValues = $.map(chartData, function(data){
+		return data[TimeframeConverted+"New Houses"];
 		});
 	
-TempCount = 0;
-i = yValues.length;
+	TempCount = 0;
+	i = yValues.length;
 
-while (i--) {
-    if (yValues[i] == '')
-        TempCount++;
-	}
+	while (i--) {
+		if (yValues[i] == '')
+			TempCount++;
+		}
 
-NonEmptyLength = yValues.length-TempCount;
-
-xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	NonEmptyLength = yValues.length-TempCount;
+	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -120,7 +117,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour1}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Units"];
 		}),
@@ -130,7 +127,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour2}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"New Apartments"];
 		}),
@@ -140,7 +137,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour4}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Retirement Village Units"];
 		}),
@@ -150,7 +147,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour5}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
 		}),
@@ -171,8 +168,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
@@ -185,21 +181,20 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 	
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
-yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Residential Buildings"];
+	yValues = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Residential Buildings"];
 		});
 	
-TempCount = 0;
-i = yValues.length;
+	TempCount = 0;
+	i = yValues.length;
 
-while (i--) {
-    if (yValues[i] == '')
-        TempCount++;
-	}
+	while (i--) {
+		if (yValues[i] == '')
+			TempCount++;
+		}
 
-NonEmptyLength = yValues.length-TempCount;
-
-xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	NonEmptyLength = yValues.length-TempCount;
+	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -212,7 +207,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour1}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"NonResidential Construction"];
 		}),
@@ -222,7 +217,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour2}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total Construction Value"];
 		}),
@@ -243,8 +238,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
@@ -257,21 +251,20 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 	
 else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 
-yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Constructed Dwellings"];
+	yValues = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Constructed Dwellings"];
 		});
 	
-TempCount = 0;
-i = yValues.length;
+	TempCount = 0;
+	i = yValues.length;
 
-while (i--) {
-    if (yValues[i] == '')
-        TempCount++;
-	}
+	while (i--) {
+		if (yValues[i] == '')
+			TempCount++;
+		}
 
-NonEmptyLength = yValues.length-TempCount;
-
-xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	NonEmptyLength = yValues.length-TempCount;
+	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -295,9 +288,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]+0.5]
-			},
+			fixedrange: Zooming			},
 		yaxis: {
 			zeroline: false, 
 			fixedrange: Zooming
@@ -307,21 +298,20 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 	
 else if (datatypetouse_Development_by_Month == "New Parcels") {
 
-yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"New Parcels"];
+	yValues = $.map(chartData, function(data){
+		return data[TimeframeConverted+"New Parcels"];
 		});
 	
-TempCount = 0;
-i = yValues.length;
+	TempCount = 0;
+	i = yValues.length;
 
-while (i--) {
-    if (yValues[i] == '')
-        TempCount++;
-	}
+	while (i--) {
+		if (yValues[i] == '')
+			TempCount++;
+		}
 
-NonEmptyLength = yValues.length-TempCount;
-
-xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	NonEmptyLength = yValues.length-TempCount;
+	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -356,21 +346,20 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 	
 else {
 
-yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Land Use Consents"];
+	yValues = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Land Use Consents"];
 		});
 	
-TempCount = 0;
-i = yValues.length;
+	TempCount = 0;
+	i = yValues.length;
 
-while (i--) {
-    if (yValues[i] == '')
-        TempCount++;
-	}
+	while (i--) {
+		if (yValues[i] == '')
+			TempCount++;
+		}
 
-NonEmptyLength = yValues.length-TempCount;
-
-xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
+	NonEmptyLength = yValues.length-TempCount;
+	xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 
 	data = [{
 		x: xRange,
@@ -383,7 +372,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour1}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Subdivision Consents"];
 		}),
@@ -393,7 +382,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		marker: {color: Colour2}
 		
         },{
-		x: xValues,
+		x: xRange,
 		y: $.map(chartData, function(data){
 			return data[TimeframeConverted+"Combined Consents"];
 		}),
@@ -401,7 +390,6 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 		type: VisType,
 		line: {width: 6,},
 		marker: {color: Colour3}
-		
         }];
 
 	layout = {
@@ -416,8 +404,7 @@ xRange = xValues.slice(xValues.length-NonEmptyLength,xValues.length);
 			tick0: 0,
 			dtick: 2,
 			tickangle: 22.5, 
-			fixedrange: Zooming,
-			range: [xValues[xValues.length - yValues.length],xValues[xValues.length - 1]]
+			fixedrange: Zooming
 			},
 		yaxis: {
 			zeroline: false, 
