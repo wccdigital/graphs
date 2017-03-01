@@ -266,6 +266,8 @@ yValues = $.map(chartData, function(data){
 alert("yValues: "+yValues);
 alert("rangeStart"+xValues[xValues.length - yValues.length]);
 	
+alert("NewWay: "+yValues.filter(function(x){ return true }).length;);
+      
 	data = [{
 		x: xValues,
 		y: $.map(chartData, function(data){
