@@ -65,9 +65,9 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
 	data = [{
 		x: xRange,
-		y: $.map(chartData, function(data){
+		y: ($.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
-		}),
+		})).slice(xValues.length-NonEmptyLength,xValues.length),
 		type: VisType,
 		line: {width: 6,},
 		marker: {color: Colour1}
