@@ -70,14 +70,14 @@ function InfometricsGraph(chartData) {
 	layout = {
 		title : DataToUseWithSpaces,
 		showlegend : true,
-		legend: {orientation: 'h'},
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis : {
 			fixedrange : Zooming,
 			zeroline : false,
 			tickmode : 'linear', 
 			tick0 : 0, 
 			dtick : 1,
-			tickangle : 22.5
+			tickangle : 45
 		},
 			yaxis : {
 			fixedrange : Zooming,

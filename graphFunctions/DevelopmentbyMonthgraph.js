@@ -83,14 +83,11 @@ else {
 	layout = {
 		title: 'Consented Dwellings by Type and Month',
 		showlegend: true,
-//		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h'},
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
-			tickmode: 'linear',
-			tick0: 0,
-			dtick: 2,
-			tickangle: 22.5, 
+			tickmode: 'auto', 
+			tickangle: 45, 
 			fixedrange: Zooming, 
 			range: [MonthsLength-24.6,MonthsLength]
 			},

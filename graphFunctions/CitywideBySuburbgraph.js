@@ -21,8 +21,7 @@ var UnitsCollated = [];
 var ApartmentsCollated = [];
 var TotalDwellingsCollated = [];
 var RetirementVillageUnitsCollated = [];
-var ConstructionValueCollated = [];
-	
+
 
 for(i = (parseInt(StartYear_Citywide_by_SuburbValue)); i <= (parseInt(EndYear_Citywide_by_SuburbValue)); i++)
 	{
@@ -69,15 +68,6 @@ for(i = (parseInt(StartYear_Citywide_by_SuburbValue)); i <= (parseInt(EndYear_Ci
 			});
 		
 		RetirementVillageUnitsCollated = ArraySummation(RetirementVillageUnitsCollated, RetirementVillageUnitsThisYear);	
-
-		
-		ConstructionValueWithYear = "ConstructionValue".concat(i);
-
-		ConstructionValueThisYear = $.map(chartData, function(data){
-			return parseInt(data[ConstructionValueWithYear]);
-			});
-		
-		ConstructionValueCollated = ArraySummation(ConstructionValueCollated, ConstructionValueThisYear);		
 		
 	};	
  
@@ -145,7 +135,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 		}
 	;}
 
-else if (datatypetouse_Citywide_by_Suburb == "Consented Dwellings by Type") {
+else {
 
 	data = [{
 		x: SuburbsList,
@@ -179,7 +169,7 @@ else if (datatypetouse_Citywide_by_Suburb == "Consented Dwellings by Type") {
 	layout = {
 		title: 'Dwellings Consented by Type and Suburb',
 		showlegend: true,
-		legend: {x: 0.8, y: 0.9},
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear', 
@@ -193,33 +183,6 @@ else if (datatypetouse_Citywide_by_Suburb == "Consented Dwellings by Type") {
 		}
 	;}
 
-else {
-	data = [{
-		x: SuburbsList,
-		y: ConstructionValueCollated,
-		type: 'bar',
-		marker: {color: Colour1}
-        }];
-
-	layout = {
-		title: 'Total Construction Value by Suburb',
-		showlegend: false,
-		xaxis: {
-			zeroline: false,
-			tickmode: 'linear',
-			tick0: 0,
-			dtick: 1,
-			tickangle: 45,
-			categoryorder: 'category ascending',
-			fixedrange: Zooming},
-       		yaxis: {
-			zeroline: false,
-			tickformat: '$,s',
-			hoverformat: '$,.4s',
-			rangemode: "tozero",
-			fixedrange: Zooming}
-			}
-	;}
 	
 Plotly.newPlot('CitywideBySuburb', data, layout);
 

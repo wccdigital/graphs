@@ -47,8 +47,8 @@ else {
 	layout = {
         title: 'Construction Value',
         showlegend: true,
-		legend: {orientation: "h"},
-        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1,  tickangle: 22.5, fixedrange: Zooming},
+		legend: {orientation: 'h', y: '-0.25'},
+        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1,  tickangle: 45, fixedrange: Zooming},
        	yaxis: {zeroline: false, tickformat: '$,s', hoverformat: '$,.4s', rangemode: "tozero", fixedrange: Zooming}
 		}
 	;

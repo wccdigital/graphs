@@ -42,22 +42,19 @@ function ConsentedValuebyMonthgraph(chartData){
 	layout = {
 		title: 'Construction Value by Month',
 		showlegend: true,
-		legend: {orientation: 'h'},
-//		legend: {x: 0.65, y: 0.95},
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
-			tickmode: 'linear', 
-			tickangle: 17.5, 
-			tick0: 0,
-			dtick: 2,
+			tickmode: 'auto', 
+			tickangle: 45, 
 			range: [MonthsLength-24.6,MonthsLength]},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickformat: '$,s', 
 			hoverformat: '$,.4s', 
-			range:[0,160000000]}
+			range:[0,120000000]}
 		}
 	;
 

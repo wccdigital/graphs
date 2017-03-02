@@ -51,9 +51,7 @@ data = [{
 layout = {
 		title: DataType+' and Population Growth',
 		showlegend: true,
-//		legend: {orientation: 'h'},
-		legend: {x: 0.0, y: 0.95},
-
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 

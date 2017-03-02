@@ -21,8 +21,7 @@ data = [{
 	y: $.map(chartData, function(data){
 		return data[DataType.concat(" Wellington City")];
 	}),
-	type: 'line',
-	line: {width: 6},
+	type: 'bar',
 	name: DataType.concat(" - Wellington City"),
 	marker: {color: Colour1}
 	
@@ -33,8 +32,7 @@ data = [{
 	y: $.map(chartData, function(data){
 		return data[DataType.concat(" Other TAs")];
 	}),
-	type: 'line',
-	line: {width: 6},
+	type: 'bar',
 	name: DataType.concat(" - Other TAs"),
 	marker: {color: Colour2}
 	
@@ -45,7 +43,7 @@ data = [{
 	y: $.map(chartData, function(data){
 		return data[TotalVar];
 	}),
-	type: 'bar',
+	type: 'line',
 	name: TotalVar,
 	marker: {color: Colour3}
        }];
@@ -53,13 +51,13 @@ data = [{
 layout = {
 	title: 'Regional distribution of consented dwellings',
 	showlegend: true,
-	legend: {orientation: 'h'},
+		legend: {orientation: 'h', y: '-0.25'},
 	xaxis: {
 		zeroline: false, 
 		tickmode: 'linear', 
 		tick0: 0, 
 		dtick: 3, 
-		tickangle: 22.5, 
+		tickangle: 45, 
 		fixedrange: Zooming
 		},
    	yaxis: {

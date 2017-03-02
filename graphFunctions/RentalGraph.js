@@ -41,15 +41,14 @@ if (DataToUse == "Wellington City"){
 	layout = {
 		title: 'Rental Costs',
 		showlegend: true,
-		legend: {orientation: 'h'},
-//		legend: {x: 0, y: 0.9},
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0,
 			dtick: 24,
-			tickangle: 17},
+			tickangle: 45},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
@@ -118,15 +117,14 @@ else {
 	layout = {
 		title: 'Rental Costs',
 		showlegend: true,
-		legend: {orientation: 'h'},
-//		legend: {x: 0, y: 0.9},
+		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0,
 			dtick: 24,
-			tickangle: 17},
+			tickangle: 45},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
