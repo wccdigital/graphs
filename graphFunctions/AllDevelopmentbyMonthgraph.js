@@ -45,9 +45,11 @@ else {
 
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
+var dels = [];
+
 function BlanksToRemove(arrY) {
  
-var i = 0;
+i = 0;
 dels = [];
 
 while (i < arrY.length) {
@@ -108,7 +110,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			},
 		}
 	;}
-
+	
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
 	var yValues = $.map(chartData, function(data){
@@ -403,6 +405,9 @@ else {
 		}
 	;}
 
+
+alert("Y = "+yValues);
+alert("X = "+xValues);
 	
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
 }
