@@ -341,6 +341,7 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'auto',
+			nticks: xValues.length,
 			tickangle: 45,
 			fixedrange: Zooming
 			},
@@ -407,6 +408,7 @@ else {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'auto',
+			nticks: xValues.length,
 			tickangle: 45,
 			fixedrange: Zooming
 			},
