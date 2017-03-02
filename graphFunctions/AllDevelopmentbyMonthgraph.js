@@ -7,53 +7,49 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
-	VisType = 'line',
+	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		}),
+		});
 	removeblanks(xValues, '')
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Years") {
-	VisType = 'line',
+	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		}),
+		});
 	removeblanks(xValues, '')
 	;}
 else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling Average") {
-	VisType = 'bar',
+	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
+		});
 	removeblanks(xValues, '')
 	;}
 else if (timeframe_Development_by_Month == "Months") {
-	VisType = 'bar',
+	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
+		});
 	removeblanks(xValues, '')
 	;}
 else if (timeframe_Development_by_Month == "Years") {
-	VisType = 'bar',
+	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		}),
+		});
 	removeblanks(xValues, '')
 	;}	
 else {
-	VisType = 'line',
+	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
+		});
 	removeblanks(xValues, '')
 	;}
 
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
-var NonEmptyLength;
-var StartPoint;
-var EndPoint;
-var xValues = [];
 
 
 function removeblanks(arr) {
@@ -68,12 +64,7 @@ function removeblanks(arr) {
 }
 
 
-
 if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
-
-	var yValues = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Total New Dwellings"];
-		});
 
 	data = [{
 		x: xValues,
@@ -103,14 +94,6 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 	;}
 
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
-
-	var yValues = $.map(chartData, function(data){
-		return data[TimeframeConverted+"New Houses"];
-		});
-		
-
-
-
 
 	data = [{
 		x: xValues,
@@ -192,13 +175,6 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
-	var yValues = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Residential Buildings"];
-		});
-	
-
-
-
 	data = [{
 		x: xValues,
 		y: removeblanks($.map(chartData, function(data){
@@ -257,12 +233,6 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 	
 else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 
-	var yValues = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Constructed Dwellings"];
-		});
-	
-
-
 	data = [{
 		x: xValues,
 		y: removeblanks($.map(chartData, function(data){
@@ -297,12 +267,6 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	
 else if (datatypetouse_Development_by_Month == "New Parcels") {
 
-	var yValues = $.map(chartData, function(data){
-		return data[TimeframeConverted+"New Parcels"];
-		});
-	
-
-
 	data = [{
 		x: xValues,
 		y: removeblanks($.map(chartData, function(data){
@@ -334,12 +298,6 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 	;}	
 	
 else {
-
-	var yValues = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Land Use Consents"];
-		});
-	
-
 
 	data = [{
 		x: xValues,
