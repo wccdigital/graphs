@@ -83,12 +83,11 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
-		
+	RemoveBlanks(yValues, dels);
+			
 	data = [{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Total New Dwellings"];
-		}), dels),
+		y: yValues,
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
