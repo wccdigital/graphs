@@ -112,18 +112,38 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 	
 else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 
-	var yValues = $.map(chartData, function(data){
+	var yValuesHouses = $.map(chartData, function(data){
 		return data[TimeframeConverted+"New Houses"];
 		});
 		
-	BlanksToRemove(yValues);
-	RemoveBlanks(xValues, dels);
+	var yValuesUnits = $.map(chartData, function(data){
+		return data[TimeframeConverted+"New Units"];
+		});
+		
+	var yValuesApartments = $.map(chartData, function(data){
+		return data[TimeframeConverted+"New Apartments"];
+		});
+	
+	var yValuesRVUs = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Retirement Village Units"];
+		});
+		
+	var yValuesTotal = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Total New Dwellings"];
+		});
+		
 
+	BlanksToRemove(yValuesHouses);
+	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValuesHouses, dels);
+	RemoveBlanks(yValuesUnits, dels);
+	RemoveBlanks(yValuesApartments, dels);
+	RemoveBlanks(yValuesRVUs, dels);
+	RemoveBlanks(yValuesTotal, dels);
+	
 	data = [{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"New Houses"];
-		}), dels),
+		y: yValuesHouses,
 		name: "Houses",
 		type: 'line',
 		connectgaps: true,
@@ -132,9 +152,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"New Units"];
-		}), dels),
+		y: yValuesUnits,
 		name: "Units",
 		type: 'line',
 		connectgaps: true,
@@ -143,9 +161,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"New Apartments"];
-		}), dels),
+		y: yValuesApartments,
 		name: "Apartments",
 		type: 'line',
 		connectgaps: true,
@@ -154,9 +170,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Retirement Village Units"];
-		}), dels),
+		y: yValuesRVUs,
 		name: "Retirement Village Units",
 		type: 'line',
 		connectgaps: true,
@@ -165,9 +179,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		 
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Total New Dwellings"];
-		}), dels),
+		y: yValuesTotal,
 		name: "Total",
 		type: 'bar',
 		connectgaps: true,
@@ -178,7 +190,6 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	layout = {
 		title: 'Consented Dwellings by Type',
 		showlegend: true,
-//		legend: {x: 0.8, y: 0.9},
 		legend : {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
@@ -199,18 +210,27 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	
 else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
 
-	var yValues = $.map(chartData, function(data){
+	var yValuesResid = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Residential Buildings"];
 		});
 	
-	BlanksToRemove(yValues);
+	var yValuesNonResid = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Residential Buildings"];
+		});
+	
+	var yValuesTotal = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Residential Buildings"];
+		});
+	
+	BlanksToRemove(yValuesResid);
 	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValuesResid, dels);
+	RemoveBlanks(yValuesNonResid, dels);
+	RemoveBlanks(yValuesTotal, dels);
 
 	data = [{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Residential Buildings"];
-		}), dels),
+		y: yValuesResid,
 		name: "Residential Buildings",
 		type: VisType,
 		line: {width: 6,},
@@ -219,9 +239,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"NonResidential Construction"];
-		}), dels),
+		y: yValuesNonResid,
 		name: "Non-Residential Construction",
 		type: VisType,
 		line: {width: 6,},
@@ -230,9 +248,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Total Construction Value"];
-		}), dels),
+		y: yValuesTotal,
 		name: "Total Construction Value",
 		type: 'line',
 		line: {width: 6,},
@@ -243,7 +259,6 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 	layout = {
 		title: 'Value of Consented Construction',
 		showlegend: true,
-//		legend: {x: 0.8, y: 0.9},
 		legend : {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
@@ -270,12 +285,11 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValues, dels);
 
 	data = [{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Constructed Dwellings"];
-		}), dels),
+		y: yValues,
 		name: "Constructed Dwellings",
 		type: VisType,
 		line: {width: 6,},
@@ -286,8 +300,6 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	layout = {
 		title: 'Constructed Dwellings',
 		showlegend: false,
-//		legend: {x: 0.8, y: 0.9},
-//		legend : {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
@@ -311,12 +323,11 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 	
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValues, dels);
 
 	data = [{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"New Parcels"];
-		}), dels),
+		y: yValues,
 		name: "New Parcels",
 		type: VisType,
 		line: {width: 6,},
@@ -327,8 +338,6 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 	layout = {
 		title: 'New Parcels',
 		showlegend: false,
-//		legend: {x: 0.8, y: 0.9},
-		legend : {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'auto',
@@ -344,18 +353,27 @@ else if (datatypetouse_Development_by_Month == "New Parcels") {
 	
 else {
 
-	var yValues = $.map(chartData, function(data){
+	var yValuesLU = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Land Use Consents"];
 		});
 	
-	BlanksToRemove(yValues);
+	var yValuesSubD = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Land Use Consents"];
+		});
+	
+	var yValuesCombined = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Land Use Consents"];
+		});
+	
+	BlanksToRemove(yValuesLU);
 	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValuesLU, dels);
+	RemoveBlanks(yValuesSubD, dels);
+	RemoveBlanks(yValuesCombined, dels);
 
 	data = [{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Land Use Consents"];
-		}), dels),
+		y: yValuesLU,
 		name: "Land Use Consents",
 		type: VisType,
 		line: {width: 6,},
@@ -364,9 +382,7 @@ else {
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Subdivision Consents"];
-		}), dels),
+		y: yValuesSubD,
 		name: "Subdivision Consents",
 		type: VisType,
 		line: {width: 6,},
@@ -375,9 +391,7 @@ else {
 		
         },{
 		x: xValues,
-		y: RemoveBlanks($.map(chartData, function(data){
-			return data[TimeframeConverted+"Combined Consents"];
-		}), dels),
+		y: yValuesCombined,
 		name: "Combined Consents",
 		type: VisType,
 		line: {width: 6,},
@@ -388,7 +402,6 @@ else {
 	layout = {
 		title: 'Resource Consents',
 		showlegend: true,
-//		legend: {x: 0.8, y: 0.9},
 		legend : {orientation: 'h', y: '-0.25'},
 		barmode: 'stack',
 		xaxis: {
@@ -405,8 +418,5 @@ else {
 	;}
 
 
-alert("Y = "+yValues);
-alert("X = "+xValues);
-	
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
 }
