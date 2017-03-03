@@ -78,7 +78,7 @@ var xValues = $.map(chartData, function (data) {
 				return data[YearUsed];
 			});
 
-BlanksToRemove(yValueWellington);
+BlanksToRemove(yValuesWellington);
 RemoveBlanks(xValues, dels);
 RemoveBlanks(yValuesWellington, dels);
 RemoveBlanks(yValuesNZ, dels);
