@@ -85,7 +85,7 @@ RemoveBlanks(yValuesNZ, dels);
 				
 	data = [{
 
-			x : xValues
+			x : xValues,
 			y : yValuesWellington,
 			type : 'bar',
 			name : "Wellington",
