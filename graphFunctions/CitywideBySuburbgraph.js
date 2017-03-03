@@ -172,7 +172,13 @@ else if (datatypetouse_Citywide_by_Suburb == "Value of Consented Construction") 
 				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
-       	yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming}
+       	yaxis: {
+			zeroline: false, 
+			rangemode: "tozero", 
+			fixedrange: Zooming,
+			tickformat: '$,s', 
+			hoverformat: '$,.4s', 
+			}
 		}
 	;}
 	
