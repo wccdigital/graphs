@@ -23,7 +23,7 @@ if (DataToUse == "Wellington City"){
 			return data["Geometric Mean"]
 			;}),
 		type: 'line',
-		name: 'Geometric Mean',
+		name: 'Mean',
 		marker: {color: Colour2}			
         },{
 		x: $.map(chartData, function(data){
