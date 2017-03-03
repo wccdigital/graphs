@@ -21,6 +21,7 @@ var UnitsCollated = [];
 var ApartmentsCollated = [];
 var TotalDwellingsCollated = [];
 var RetirementVillageUnitsCollated = [];
+var ConstructionValueCollated = [];
 
 
 for(i = (parseInt(StartYear_Citywide_by_SuburbValue)); i <= (parseInt(EndYear_Citywide_by_SuburbValue)); i++)
