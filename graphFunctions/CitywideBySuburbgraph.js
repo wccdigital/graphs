@@ -174,10 +174,10 @@ else {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0, 
-			dtick: 3,  
+			dtick: 1,  
 			tickangle: 45, 
 			tickfont: {
-				size: 8,
+				size: 6,
 				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
