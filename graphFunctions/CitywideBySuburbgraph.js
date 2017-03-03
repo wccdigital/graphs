@@ -68,7 +68,17 @@ for(i = (parseInt(StartYear_Citywide_by_SuburbValue)); i <= (parseInt(EndYear_Ci
 			});
 		
 		RetirementVillageUnitsCollated = ArraySummation(RetirementVillageUnitsCollated, RetirementVillageUnitsThisYear);	
+	
+
+		ConstructionValueWithYear = "ConstructionValue".concat(i);
+
+		ConstructionValueThisYear = $.map(chartData, function(data){
+			return parseInt(data[ConstructionValueWithYear]);
+			});
 		
+		ConstructionValueCollated = ArraySummation(ConstructionValueCollated, ConstructionValueThisYear);
+
+				
 	};	
  
 function ArraySummation(array1, array2){
@@ -137,7 +147,34 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
        	yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming}
 		}
 	;}
+			
+else if (datatypetouse_Citywide_by_Suburb == "Value of Consented Construction") {
 
+	data = [{
+		x: SuburbsList,
+		y: ConstructionValueCollated,
+		type: 'bar',
+		marker: {color: Colour1}
+        }];
+
+	layout = {
+		title: 'Value of Consented Construction by Suburb',
+		showlegend: false,
+		xaxis: {
+			zeroline: false, 
+			tickmode: 'linear', 
+			tick0: 0, 
+			dtick: 1, 
+			tickangle: 45, 
+			tickfont: {
+				size: 1,
+				},
+			categoryorder: 'category ascending',
+			fixedrange: Zooming},
+       	yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming}
+		}
+	;}
+	
 else {
 
 	data = [{
