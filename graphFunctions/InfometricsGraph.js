@@ -8,11 +8,9 @@ function InfometricsGraph(chartData) {
 	YearUsed = "";
 
 	if (DataToUseWithSpaces == "Housing Affordability Index") {
-		RangeValues = [6, 10],
 		YearUsed = "YearThree"
 	};
 	if (DataToUseWithSpaces == "Rental Affordability Index") {
-		RangeValues = [0.2, 0.4],
 		YearUsed = "YearOne"
 	};
 
@@ -36,14 +34,59 @@ function InfometricsGraph(chartData) {
 		textdiv.appendChild(aTag); ;
 	}
 
+	
+
+var dels = [];
+
+function BlanksToRemove(arrY) {
+ 
+i = 0;
+dels = [];
+
+while (i < arrY.length) {
+	if (arrY[i] == ''){
+    dels.push(i);
+    i++
+    ;}
+ 
+	else {
+	i++
+	;}
+
+}
+
+;}
+
+
+function RemoveBlanks(arr, deletes) {
+ 
+for (var i = deletes.length-1; i >= 0; i--){
+	arr.splice(deletes[i],1)
+	;}
+;}
+
+
+var yValuesWellington = $.map(chartData, function (data) {
+				return data[DataToUse];
+			});
+
+var yValuesNZ = $.map(chartData, function (data) {
+				return data[DataToUse.concat("_NZ")];
+			});
+
+var xValues = $.map(chartData, function (data) {
+				return data[YearUsed];
+			});
+
+BlanksToRemove(yValueWellington);
+RemoveBlanks(xValues, dels);
+RemoveBlanks(yValuesWellington, dels);
+RemoveBlanks(yValuesNZ, dels);
+				
 	data = [{
 
-			x : $.map(chartData, function (data) {
-				return data[YearUsed];
-			}),
-			y : $.map(chartData, function (data) {
-				return data[DataToUse];
-			}),
+			x : xValues
+			y : yValuesWellington,
 			type : 'bar',
 			name : "Wellington",
 			marker : {
@@ -52,12 +95,8 @@ function InfometricsGraph(chartData) {
 
 		}, {
 
-			x : $.map(chartData, function (data) {
-				return data[YearUsed];
-			}),
-			y : $.map(chartData, function (data) {
-				return data[DataToUse.concat("_NZ")];
-			}),
+			x : xValues,
+			y : yValuesNZ,
 			type : 'line',
 			name : "New Zealand",
 			marker : {
@@ -81,8 +120,7 @@ function InfometricsGraph(chartData) {
 		},
 			yaxis : {
 			fixedrange : Zooming,
-			zeroline : false,
-			range : RangeValues
+			zeroline : false
 		}
 
 		};
