@@ -130,7 +130,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 			dtick: 1, 
 			tickangle: 45, 
 			tickfont: {
-				size: 4,
+				size: 2,
 				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
@@ -180,7 +180,7 @@ else {
 			dtick: 1,  
 			tickangle: 45, 
 			tickfont: {
-				size: 4,
+				size: 2,
 				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
