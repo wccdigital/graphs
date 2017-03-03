@@ -176,6 +176,9 @@ else {
 			tick0: 0, 
 			dtick: 3,  
 			tickangle: 45, 
+			tickfont: {
+				size: 8,
+				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
 		yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming},
