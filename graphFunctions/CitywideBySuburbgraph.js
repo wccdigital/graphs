@@ -127,8 +127,11 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0, 
-			dtick: 3, 
+			dtick: 1, 
 			tickangle: 45, 
+			tickfont: {
+				size: 4,
+				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
        	yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming}
@@ -177,7 +180,7 @@ else {
 			dtick: 1,  
 			tickangle: 45, 
 			tickfont: {
-				size: 6,
+				size: 4,
 				},
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
