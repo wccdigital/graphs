@@ -386,7 +386,7 @@ var graphdata = [{
 			},{
 				text : "Choose a data type",
 				id : "datatypedd_suburbgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type"]
+				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction"]
 			}
 		],
 		link : [
