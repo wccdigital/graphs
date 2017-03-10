@@ -35,6 +35,10 @@ if (suburbtouse == "") {
 		return data["TotalDwellings".concat(suburbtouse)];
 		});
 
+	constructionvaluedata = $.map(chartData, function(data){ 
+		return data["ConstructionValue".concat(suburbtouse)]; 
+		}); 
+		
 	housedata_comparisonsuburb = $.map(chartData, function(data){
 		return data["Houses".concat(comparisonsuburbtouse)];
 		});
@@ -55,9 +59,13 @@ if (suburbtouse == "") {
 		return data["TotalDwellings".concat(comparisonsuburbtouse)];
 		});
 
+		
+	constructionvaluedata_comparisonsuburb = $.map(chartData, function(data){ 
+		return data["ConstructionValue".concat(comparisonsuburbtouse)]; 
+		}); 
+ 
 
-	
-if (comparisonsuburbtouse == "") {
+ if (comparisonsuburbtouse == "") {
 		visibilitytoggle = false
 	;}
 	
@@ -235,6 +243,49 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			domain:[0.55,1]}
 		}
 	;}
+
+else if (datatypetouse == "Value of Consented Construction") {
+
+	data = [{ 
+		x: SuburbYears, 
+		y: constructionvaluedata, 
+		name: suburbtouse, 
+		line: {width: 6}, 
+		marker: {color: Colour1} 
+
+	    },{ 
+		x: SuburbYears, 
+		y: constructionvaluedata_comparisonsuburb, 
+		name: comparisonsuburbtouse, 
+		visible: visibilitytoggle, 
+		line: {width: 6}, 
+		marker: {color: Colour2} 
+		}], 
+
+
+	layout = { 
+		title: 'Construction Value', 
+		showlegend: true, 
+		legend: {orientation: 'h', y: '-0.25'}, 
+		xaxis: {
+			zeroline: false,
+			tickmode: 'linear',
+			tick0: 0,
+			dtick: 1,
+			tickangle: 45,
+			fixedrange: Zooming
+			}, 
+		yaxis: {
+			zeroline: false,
+			tickformat: '$,s',
+			hoverformat: '$,.4s',
+			rangemode: "tozero",
+			fixedrange: Zooming
+			} 
+		}
+
+	;} 
+
 
 else {
 	data = [{
