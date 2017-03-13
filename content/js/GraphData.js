@@ -198,8 +198,11 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand, Wellington City Council, and .ID (.csv)",
 				url : "/wccgraphs/data/DwellingsCCCd.csv"
+			},{
+				text : "Forecast.ID",
+				url : "forecast.idnz.co.nz/wellington"
 			}
 		]
 	}, {
@@ -221,12 +224,11 @@ var graphdata = [{
 		link : [
 			{	
 				linktext : "Datasource",
+				text : "Infometrics (.csv)",
+				url : "/wccgraphs/data/Infometrics.csv"
+			},{
 				text : "Infometrics",
 				url : "http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor"
-			},{
-				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/wccgraphs/data/Infometrics.csv"
 			}
 		],
 		div : [
@@ -288,7 +290,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Infometrics (.csv)",
 				url : "/wccgraphs/data/HouseDataQuarterly.csv"
 			}
 		]
@@ -310,7 +312,7 @@ var graphdata = [{
 		],		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand (.csv)",
 				url : "/wccgraphs/data/RegionalByYear.csv"
 			}
 		]
@@ -333,8 +335,11 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Ministry of Business, Innovation and Employment (.csv)",
 				url : "/wccgraphs/data/RentalData.csv"
+			},{
+				text : "Ministry of Business, Innovation and Employment",
+				url : "www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"				
 			}
 		]
 	}, {
@@ -425,7 +430,11 @@ var graphdata = [{
 				linktext : "Datasource",
 				text : "Ministry of Business, Innovation and Employment (.csv)",
 				url : "/wccgraphs/data/RentDetailedQuarterly.csv"
+			},{
+				text : "Ministry of Business, Innovation and Employment",
+				url : "www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"
 			}
 		]
 		}
 ];
+
