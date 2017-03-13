@@ -21,7 +21,7 @@ function InfometricsGraph(chartData) {
 		var aTag = document.createElement('a');
 		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Wellington%20City/StandardOfLiving/RentalAffordability");
 		aTag.setAttribute('target', "_blank");
-		aTag.innerHTML = "Datasource: Rental Affordability Index";
+		aTag.innerHTML = "Rental Affordability Index";
 		textdiv.appendChild(aTag); ;
 	}
 
@@ -30,7 +30,7 @@ function InfometricsGraph(chartData) {
 		var aTag = document.createElement('a');
 		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Wellington%20City/StandardOfLiving/Housing_Affordability");
 		aTag.setAttribute('target', "_blank");
-		aTag.innerHTML = "Datasource: Housing Affordability Index";
+		aTag.innerHTML = "Housing Affordability Index";
 		textdiv.appendChild(aTag); ;
 	}
 
