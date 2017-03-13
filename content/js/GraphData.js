@@ -201,10 +201,12 @@ var graphdata = [{
 				text : "Statistics New Zealand, Wellington City Council, and .ID (.csv)",
 				url : "/wccgraphs/data/DwellingsCCCd.csv"
 			},{
+				linktext : "Forecast.ID website",
 				text : "Forecast.ID",
-				url : "forecast.idnz.co.nz/wellington"
+				url : "http://forecast.idnz.co.nz/wellington"
 			}
 		]
+		
 	}, {
 		name : "Infometrics Graph",
 		id : "InfometricsGraph",
@@ -227,6 +229,7 @@ var graphdata = [{
 				text : "Infometrics (.csv)",
 				url : "/wccgraphs/data/Infometrics.csv"
 			},{
+				linktext : "Infometrics website",
 				text : "Infometrics",
 				url : "http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor"
 			}
@@ -236,6 +239,7 @@ var graphdata = [{
 				id : "ExtraReferences"
 			}
 		]
+
 	}, {
 		name : "Dwelling Type Over Time",
 		id : "DwellingTypePie",
@@ -338,6 +342,7 @@ var graphdata = [{
 				text : "Ministry of Business, Innovation and Employment (.csv)",
 				url : "/wccgraphs/data/RentalData.csv"
 			},{
+				linktext : "MBIE rental data website",
 				text : "Ministry of Business, Innovation and Employment",
 				url : "www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"				
 			}
@@ -431,6 +436,7 @@ var graphdata = [{
 				text : "Ministry of Business, Innovation and Employment (.csv)",
 				url : "/wccgraphs/data/RentDetailedQuarterly.csv"
 			},{
+				linktext : "MBIE rental data website",
 				text : "Ministry of Business, Innovation and Employment",
 				url : "www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"
 			}
