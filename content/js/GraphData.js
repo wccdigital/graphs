@@ -54,86 +54,8 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand (.csv)",
 				url : "/wccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv"
-			}
-		]
-	}, {
-		name : "Consented Value By Month Information",
-		id : "ConsentedValueByMonthInfo",
-		container : "ConsentedValuebyMonth",
-		width : "100%",
-		height : "500px",
-		csv : "/wccgraphs/data/CitywideBCdataMonthly.csv",
-		func : 'ConsentedValuebyMonthgraph',
-		funcFile : "/wccgraphs/graphFunctions/ConsentedValuebyMonthgraph.js",
-		link : [
-			{
-				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/wccgraphs/data/CitywideBCdataMonthly.csv"
-			}
-		]
-	}, {
-		name : "Consented Value by Suburb Information",
-		id : "ConsentedValueBySuburbInfo",
-		container : "SuburbConsentedValue",
-		width : "100%",
-		height : "500px",
-		csv : "/wccgraphs/data/SuburbBCDataAnnualbyYear.csv",
-		func : "ConsentedValuebySuburbGraph",
-		funcFile : "/wccgraphs/graphFunctions/ConsentedValuebySuburbGraph.js",
-		drop : [
-			{
-				text : "Choose an area",
-				id : "datafromdropdown_suburbgraph",
-				valtext : ["Wellington City Total","Aro Valley","Berhampore","Breaker Bay","Broadmeadows","Brooklyn","Churton Park",
-				"Crofton Downs","Glenside","Grenada North","Grenada Village","Hataitai","Highbury","Horokiwi","Houghton Bay",
-				"Island Bay","Johnsonville","Kaiwharawhara","Karaka Bays","Karori","Kelburn","Khandallah","Kilbirnie","Kingston",
-				"Lyall Bay","Makara","Makara Beach","Maupuia","Melrose","Miramar","Moa Point","Mornington","Mt Cook","Mt Victoria",
-				"Newlands","Newtown","Ngaio","Ngauranga","Northland","Ohariu","Oriental Bay","Owhiro Bay","Paparangi","Pipitea","Rongotai",
-				"Roseneath","Seatoun","Southgate","Strathmore Park","Takapu Valley","Tawa","Te Aro","Thorndon","Vogeltown","Wadestown",
-				"Wellington Central","Wilton","Woodridge"]
-			},{
-				text : "Compare with another area",
-				id : "comparisiondd_suburbgraph",
-				valtext : ["","Wellington City Total","Aro Valley","Berhampore","Breaker Bay","Broadmeadows","Brooklyn","Churton Park",
-				"Crofton Downs","Glenside","Grenada North","Grenada Village","Hataitai","Highbury","Horokiwi","Houghton Bay",
-				"Island Bay","Johnsonville","Kaiwharawhara","Karaka Bays","Karori","Kelburn","Khandallah","Kilbirnie","Kingston",
-				"Lyall Bay","Makara","Makara Beach","Maupuia","Melrose","Miramar","Moa Point","Mornington","Mt Cook","Mt Victoria",
-				"Newlands","Newtown","Ngaio","Ngauranga","Northland","Ohariu","Oriental Bay","Owhiro Bay","Paparangi","Pipitea","Rongotai",
-				"Roseneath","Seatoun","Southgate","Strathmore Park","Takapu Valley","Tawa","Te Aro","Thorndon","Vogeltown","Wadestown",
-				"Wellington Central","Wilton","Woodridge"]
-			}
-		],
-		link : [
-			{
-				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/wccgraphs/data/SuburbBCDataAnnualbyYear.csv"
-			}
-		]
-	}, {
-		name : "Development By Month",
-		id : "DevMonthInfo",
-		container : "DevelopmentbyMonth",
-		width : "100%",
-		height : "500px",
-		csv : "/wccgraphs/data/CitywideBCdataMonthly.csv",
-		func : 'DevelopmentbyMonthgraph',
-		funcFile : "/wccgraphs/graphFunctions/DevelopmentbyMonthgraph.js",
-		drop : [
-			{
-				text : "Choose a data type",
-				id : "datatypedd_DevelopmentbyMonthgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type"]
-			}
-		],
-		link : [
-			{
-				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/wccgraphs/data/CitywideBCdataMonthly.csv"
 			}
 		]
 	}, {
@@ -175,7 +97,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand (.csv)",
 				url : "/wccgraphs/data/CitywideBCdataAnnual.csv"
 			}
 		]
@@ -228,10 +150,6 @@ var graphdata = [{
 				linktext : "Datasource",
 				text : "Infometrics (.csv)",
 				url : "/wccgraphs/data/Infometrics.csv"
-			},{
-				linktext : "Infometrics website",
-				text : "Infometrics",
-				url : "http://ecoprofile.infometrics.co.nz/Wellington%20City/QuarterlyEconomicMonitor"
 			}
 		],
 		div : [
@@ -271,7 +189,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand (.csv)",
 				url : "/wccgraphs/data/DwellingTypeSplitAnnual.csv"
 			}
 		]
@@ -313,7 +231,8 @@ var graphdata = [{
 				id : "Regional_DataType",
 				valtext : ["Total Dwellings","Houses","Units","Apartments","Retirement village units"]
 			}
-		],		link : [
+		],		
+		link : [
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand (.csv)",
@@ -344,23 +263,7 @@ var graphdata = [{
 			},{
 				linktext : "MBIE rental data website",
 				text : "Ministry of Business, Innovation and Employment",
-				url : "www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"				
-			}
-		]
-	}, {
-		name : "Resource Consents Graph",
-		id : "ResourceConsentsGraph",
-		container : "ResourceConsentsIssued",
-		width : "100%",
-		height : "500px",
-		csv : "/wccgraphs/data/ResourceConsentsMonthly.csv",
-		func : 'ResourceConsentsIssuedgraph',
-		funcFile : "/wccgraphs/graphFunctions/ResourceConsentsIssuedGraph.js",
-		link : [
-			{
-				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
-				url : "/wccgraphs/data/ResourceConsentsMonthly.csv"
+				url : "http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"				
 			}
 		]
 	}, {
@@ -402,7 +305,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand (.csv)",
 				url : "/wccgraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
@@ -438,7 +341,7 @@ var graphdata = [{
 			},{
 				linktext : "MBIE rental data website",
 				text : "Ministry of Business, Innovation and Employment",
-				url : "www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"
+				url : "http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"
 			}
 		]
 		}
