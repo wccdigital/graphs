@@ -215,11 +215,11 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		});
 	
 	var yValuesNonResid = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Residential Buildings"];
+		return data[TimeframeConverted+"Non-Residential Construction"];
 		});
 	
 	var yValuesTotal = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Residential Buildings"];
+		return data[TimeframeConverted+"Total Construction Value"];
 		});
 	
 	BlanksToRemove(yValuesResid);
