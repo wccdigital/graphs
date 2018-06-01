@@ -359,11 +359,11 @@ else {
 		});
 	
 	var yValuesSubD = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Land Use Consents"];
+		return data[TimeframeConverted+"Subdivision Consents"];
 		});
 	
 	var yValuesCombined = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Land Use Consents"];
+		return data[TimeframeConverted+"Combined Consents"];
 		});
 	
 	BlanksToRemove(yValuesLU);
