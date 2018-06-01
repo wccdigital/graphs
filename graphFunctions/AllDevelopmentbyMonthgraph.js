@@ -215,7 +215,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		});
 	
 	var yValuesNonResid = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Non-Residential Construction"];
+		return data[TimeframeConverted+"NonResidential Construction"];
 		});
 	
 	var yValuesTotal = $.map(chartData, function(data){
@@ -240,7 +240,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
         },{
 		x: xValues,
 		y: yValuesNonResid,
-		name: "Non-Residential Construction",
+		name: "NonResidential Construction",
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
