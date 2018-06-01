@@ -250,7 +250,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		x: xValues,
 		y: yValuesTotal,
 		name: "Total Construction Value",
-		type: 'line',
+		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour3}
